@@ -1,0 +1,17 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65.2 clang-900.0.37)"
+options: "f82ba09e466753f5f0b198b8c513f218"
+build_time: [1509378172, 29496000]
+inputs:
+  "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/loggingOutViewController.swift": [1508996129, 0]
+  "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/loginViewController.swift": [1508996482, 0]
+  "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/referralViewController.swift": [1509378171, 0]
+  "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/shopTitleTableTableViewCell.swift": [1509077314, 0]
+  "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/storeItemTableViewCell.swift": [1509315605, 0]
+  "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/createShopTableViewController.swift": [1509334105, 0]
+  "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/ViewController.swift": [1508959368, 0]
+  "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/addItemTableViewCell.swift": [1509081137, 0]
+  "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/AppDelegate.swift": [1508946340, 0]
+  "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/myShopsTableViewController.swift": [1509335767, 0]
+  "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/singleShopTableViewController.swift": [1509319374, 0]
+  "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/newItemViewController.swift": [1508949074, 0]
+  "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/shopTableViewController.swift": [1509319022, 0]
