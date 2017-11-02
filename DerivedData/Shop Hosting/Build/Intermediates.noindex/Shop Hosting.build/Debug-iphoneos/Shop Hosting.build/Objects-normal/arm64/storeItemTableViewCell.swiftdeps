@@ -1,0 +1,410 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "storeItemTableViewCell"
+provides-nominal:
+- "12Shop_Hosting22storeItemTableViewCellC"
+provides-member:
+- ["12Shop_Hosting22storeItemTableViewCellC", ""]
+provides-dynamic-lookup:
+- "awakeFromNib"
+- "itemName"
+- "minusItem"
+- "numItem"
+- "plusItem"
+- "setSelected"
+depends-top-level:
+- !private "+="
+- !private "-="
+- "AssignmentPrecedence"
+- "Bool"
+- !private "StringLiteralType"
+- "UIButton"
+- "UILabel"
+- "UITableViewCell"
+- "storeItemTableViewCell"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["So15CALayerDelegateP", "awakeFromNib"]
+- !private ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "itemCount"]
+- !private ["So15CALayerDelegateP", "numItem"]
+- !private ["So15CALayerDelegateP", "setSelected"]
+- !private ["So15CALayerDelegateP", "text"]
+- ["So15CALayerDelegateP", ""]
+- !private ["s7CVarArgP", "awakeFromNib"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "itemCount"]
+- !private ["s7CVarArgP", "numItem"]
+- !private ["s7CVarArgP", "setSelected"]
+- !private ["s7CVarArgP", "text"]
+- ["s7CVarArgP", ""]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "awakeFromNib"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "itemCount"]
+- !private ["s28CustomDebugStringConvertibleP", "numItem"]
+- !private ["s28CustomDebugStringConvertibleP", "setSelected"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "awakeFromNib"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "itemCount"]
+- !private ["s23CustomStringConvertibleP", "numItem"]
+- !private ["s23CustomStringConvertibleP", "setSelected"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "awakeFromNib"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "itemCount"]
+- !private ["s9EquatableP", "numItem"]
+- !private ["s9EquatableP", "setSelected"]
+- !private ["s9EquatableP", "text"]
+- ["s9EquatableP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "awakeFromNib"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "itemCount"]
+- !private ["s8HashableP", "numItem"]
+- !private ["s8HashableP", "setSelected"]
+- !private ["s8HashableP", "text"]
+- ["s8HashableP", ""]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "awakeFromNib"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "itemCount"]
+- !private ["So8NSCodingP", "numItem"]
+- !private ["So8NSCodingP", "setSelected"]
+- !private ["So8NSCodingP", "text"]
+- ["So8NSCodingP", ""]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "UIButton"]
+- ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "awakeFromNib"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "itemCount"]
+- ["So8NSObjectC", "itemName"]
+- ["So8NSObjectC", "minusItem"]
+- ["So8NSObjectC", "numItem"]
+- ["So8NSObjectC", "plusItem"]
+- ["So8NSObjectC", "setSelected"]
+- !private ["So8NSObjectC", "text"]
+- !private ["So16NSObjectProtocolP", "awakeFromNib"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "itemCount"]
+- !private ["So16NSObjectProtocolP", "numItem"]
+- !private ["So16NSObjectProtocolP", "setSelected"]
+- !private ["So16NSObjectProtocolP", "text"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "awakeFromNib"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "itemCount"]
+- !private ["So29UIAccessibilityIdentificationP", "numItem"]
+- !private ["So29UIAccessibilityIdentificationP", "setSelected"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- ["So29UIAccessibilityIdentificationP", ""]
+- !private ["So12UIAppearanceP", "awakeFromNib"]
+- !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "itemCount"]
+- !private ["So12UIAppearanceP", "numItem"]
+- !private ["So12UIAppearanceP", "setSelected"]
+- !private ["So12UIAppearanceP", "text"]
+- ["So12UIAppearanceP", ""]
+- !private ["So21UIAppearanceContainerP", "awakeFromNib"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "itemCount"]
+- !private ["So21UIAppearanceContainerP", "numItem"]
+- !private ["So21UIAppearanceContainerP", "setSelected"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So17UICoordinateSpaceP", "awakeFromNib"]
+- !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "itemCount"]
+- !private ["So17UICoordinateSpaceP", "numItem"]
+- !private ["So17UICoordinateSpaceP", "setSelected"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- ["So17UICoordinateSpaceP", ""]
+- !private ["So13UIDynamicItemP", "awakeFromNib"]
+- !private ["So13UIDynamicItemP", "init"]
+- !private ["So13UIDynamicItemP", "itemCount"]
+- !private ["So13UIDynamicItemP", "numItem"]
+- !private ["So13UIDynamicItemP", "setSelected"]
+- !private ["So13UIDynamicItemP", "text"]
+- ["So13UIDynamicItemP", ""]
+- !private ["So18UIFocusEnvironmentP", "awakeFromNib"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "itemCount"]
+- !private ["So18UIFocusEnvironmentP", "numItem"]
+- !private ["So18UIFocusEnvironmentP", "setSelected"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So11UIFocusItemP", "awakeFromNib"]
+- !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "itemCount"]
+- !private ["So11UIFocusItemP", "numItem"]
+- !private ["So11UIFocusItemP", "setSelected"]
+- !private ["So11UIFocusItemP", "text"]
+- ["So11UIFocusItemP", ""]
+- !private ["So27UIGestureRecognizerDelegateP", "awakeFromNib"]
+- !private ["So27UIGestureRecognizerDelegateP", "init"]
+- !private ["So27UIGestureRecognizerDelegateP", "itemCount"]
+- !private ["So27UIGestureRecognizerDelegateP", "numItem"]
+- !private ["So27UIGestureRecognizerDelegateP", "setSelected"]
+- ["So27UIGestureRecognizerDelegateP", ""]
+- !private ["So7UILabelC", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "awakeFromNib"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "itemCount"]
+- !private ["So30UIPasteConfigurationSupportingP", "numItem"]
+- !private ["So30UIPasteConfigurationSupportingP", "setSelected"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "UIButton"]
+- ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "awakeFromNib"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "itemCount"]
+- ["So11UIResponderC", "itemName"]
+- ["So11UIResponderC", "minusItem"]
+- ["So11UIResponderC", "numItem"]
+- ["So11UIResponderC", "plusItem"]
+- ["So11UIResponderC", "setSelected"]
+- !private ["So11UIResponderC", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "awakeFromNib"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "itemCount"]
+- !private ["So30UIResponderStandardEditActionsP", "numItem"]
+- !private ["So30UIResponderStandardEditActionsP", "setSelected"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- ["So15UITableViewCellC", "Bool"]
+- ["So15UITableViewCellC", "UIButton"]
+- ["So15UITableViewCellC", "UILabel"]
+- ["So15UITableViewCellC", "awakeFromNib"]
+- ["So15UITableViewCellC", "init"]
+- ["So15UITableViewCellC", "itemCount"]
+- ["So15UITableViewCellC", "itemName"]
+- ["So15UITableViewCellC", "minusItem"]
+- ["So15UITableViewCellC", "numItem"]
+- ["So15UITableViewCellC", "plusItem"]
+- ["So15UITableViewCellC", "setSelected"]
+- ["So15UITableViewCellC", ""]
+- !private ["So18UITraitEnvironmentP", "awakeFromNib"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "itemCount"]
+- !private ["So18UITraitEnvironmentP", "numItem"]
+- !private ["So18UITraitEnvironmentP", "setSelected"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- ["So18UITraitEnvironmentP", ""]
+- ["So6UIViewC", "Bool"]
+- ["So6UIViewC", "UIButton"]
+- ["So6UIViewC", "UILabel"]
+- ["So6UIViewC", "awakeFromNib"]
+- ["So6UIViewC", "init"]
+- ["So6UIViewC", "itemCount"]
+- ["So6UIViewC", "itemName"]
+- ["So6UIViewC", "minusItem"]
+- ["So6UIViewC", "numItem"]
+- ["So6UIViewC", "plusItem"]
+- ["So6UIViewC", "setSelected"]
+- !private ["So6UIViewC", "text"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "awakeFromNib"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "itemCount"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "numItem"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "setSelected"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "awakeFromNib"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "itemCount"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "numItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setSelected"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- ["12Shop_Hosting22storeItemTableViewCellC", "Bool"]
+- ["12Shop_Hosting22storeItemTableViewCellC", "UIButton"]
+- ["12Shop_Hosting22storeItemTableViewCellC", "UILabel"]
+- ["12Shop_Hosting22storeItemTableViewCellC", "awakeFromNib"]
+- ["12Shop_Hosting22storeItemTableViewCellC", "deinit"]
+- ["12Shop_Hosting22storeItemTableViewCellC", "init"]
+- ["12Shop_Hosting22storeItemTableViewCellC", "itemCount"]
+- ["12Shop_Hosting22storeItemTableViewCellC", "itemName"]
+- ["12Shop_Hosting22storeItemTableViewCellC", "minusItem"]
+- ["12Shop_Hosting22storeItemTableViewCellC", "numItem"]
+- ["12Shop_Hosting22storeItemTableViewCellC", "plusItem"]
+- ["12Shop_Hosting22storeItemTableViewCellC", "setSelected"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "So29UIAccessibilityIdentificationP"
+- "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- "So17UICoordinateSpaceP"
+- "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- "So11UIFocusItemP"
+- "So27UIGestureRecognizerDelegateP"
+- !private "So7UILabelC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So15UITableViewCellC"
+- "So18UITraitEnvironmentP"
+- "So6UIViewC"
+- !private "s23_BidirectionalIndexableP"
+- "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s26_RangeReplaceableIndexableP"
+- !private "s16_SwiftStringViewP"
+- "12Shop_Hosting22storeItemTableViewCellC"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FIRInstanceID.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FirebaseInstanceID.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRMutableData.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRDatabaseReference.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAuthAPNSTokenType.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRDataEventType.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseCore/FirebaseCore/FirebaseCore.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRDatabase.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FirebaseDatabase.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Firebase/Core/Sources/Firebase.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAuthUIDelegate.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalytics+AppDelegate.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRServerValue.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAuth.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FirebaseAuth.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAuthCredential.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRPhoneAuthCredential.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseCore/FirebaseCore/FIRLoggerLevel.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FirebaseAuthVersion.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseCore/FirebaseCore/FIRConfiguration.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRConfiguration.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseCore/FirebaseCore/FIRAnalyticsConfiguration.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalyticsConfiguration.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRUserInfo.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAdditionalUserInfo.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseCore/FirebaseCore/FIRApp.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRApp.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/Shop Hosting-Bridging-Header.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIROAuthProvider.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRGitHubAuthProvider.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRGoogleAuthProvider.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRPhoneAuthProvider.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRFacebookAuthProvider.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIREmailAuthProvider.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRTwitterAuthProvider.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/SWRevealViewController.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRUser.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalytics.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FirebaseAnalytics.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRParameterNames.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIREventNames.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRUserPropertyNames.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRActionCodeSettings.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseCore/FirebaseCore/FIROptions.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIROptions.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAuthErrors.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAuthDataResult.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRTransactionResult.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRDataSnapshot.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseCore/FirebaseCore/FIRCoreSwiftNameSupport.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRDatabaseSwiftNameSupport.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAuthSwiftNameSupport.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRDatabaseQuery.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Firebase/Core/Sources/module.modulemap"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+interface-hash: "97d94bab11b84663d86fa3fe1ba89e6c"

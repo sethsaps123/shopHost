@@ -48,7 +48,7 @@ class shopTableViewController: UITableViewController {
     
     var ref: DatabaseReference!
     
-    var numColumns: Int!
+    var numColumns = 0
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -70,7 +70,7 @@ class shopTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return numColumns ?? 0
+        return numColumns
     }
 
     
@@ -78,7 +78,7 @@ class shopTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath)
         
         // Configure the cell...
-        cell.textLabel?.text = (String)(describing: items[indexPath.item].key)
+        cell.textLabel?.text = items[indexPath.item].key
 
         return cell
     }
@@ -90,15 +90,6 @@ class shopTableViewController: UITableViewController {
             if let navVC = segue.destination as? UINavigationController {
                 if let vc = navVC.viewControllers.first as? singleShopTableViewController {
                     vc.shopName = self.storeToSegueTo
-                    /* self.ref.child("shops").child(self.storeToSegueTo).child("shopItems").observeSingleEvent(of: .value, with: {(snapshot) in
-                     
-                     vc.numRows = (Int)(snapshot.childrenCount)
-                     for item in snapshot.children {
-                     vc.itemNames.append(item as! DataSnapshot)
-                     }
-                     })
-                     */
-                    
                 }
             }
         }

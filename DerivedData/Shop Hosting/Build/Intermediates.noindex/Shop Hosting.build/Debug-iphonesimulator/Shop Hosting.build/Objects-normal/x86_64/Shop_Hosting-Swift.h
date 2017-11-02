@@ -200,6 +200,11 @@ SWIFT_CLASS("_TtC12Shop_Hosting11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+@interface UIViewController (SWIFT_EXTENSION(Shop_Hosting))
+- (void)dismissKeyboard;
+@end
+
 @class UITextField;
 @class UILabel;
 @class UIButton;
@@ -213,6 +218,7 @@ SWIFT_CLASS("_TtC12Shop_Hosting14ViewController")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified textFieldEmail;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified textFieldPassword;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified labelMessage;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified phoneNumberTextField;
 - (IBAction)buttonRegister:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -263,6 +269,9 @@ SWIFT_CLASS("_TtC12Shop_Hosting19loginViewController")
 @interface loginViewController : UIViewController
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified appNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified appDetailLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified noAccountLabel;
 - (IBAction)signIn:(UIButton * _Nonnull)sender;
 - (IBAction)cancelLogin:(id _Nonnull)sender;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified emailLogin;
@@ -295,6 +304,24 @@ SWIFT_CLASS("_TtC12Shop_Hosting21newItemViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIStoryboardSegue;
+
+SWIFT_CLASS("_TtC12Shop_Hosting25ordersTableViewController")
+@interface ordersTableViewController : UITableViewController
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem * _Null_unspecified menuButton;
+- (void)didReceiveMemoryWarning;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC12Shop_Hosting22referralViewController")
 @interface referralViewController : UIViewController
@@ -308,7 +335,23 @@ SWIFT_CLASS("_TtC12Shop_Hosting22referralViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIStoryboardSegue;
+
+SWIFT_CLASS("_TtC12Shop_Hosting29shopOrdersTableViewController")
+@interface shopOrdersTableViewController : UITableViewController
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem * _Null_unspecified menuButton;
+- (void)didReceiveMemoryWarning;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC12Shop_Hosting23shopTableViewController")
 @interface shopTableViewController : UITableViewController
@@ -338,6 +381,21 @@ SWIFT_CLASS("_TtC12Shop_Hosting27shopTitleTableTableViewCell")
 @end
 
 
+SWIFT_CLASS("_TtC12Shop_Hosting30singleOrderTableViewController")
+@interface singleOrderTableViewController : UITableViewController
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (IBAction)back:(UIBarButtonItem * _Nonnull)sender;
+- (void)didReceiveMemoryWarning;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC12Shop_Hosting29singleShopTableViewController")
 @interface singleShopTableViewController : UITableViewController
 - (void)viewDidLoad;
@@ -347,6 +405,7 @@ SWIFT_CLASS("_TtC12Shop_Hosting29singleShopTableViewController")
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (IBAction)checkoutButton:(UIBarButtonItem * _Nonnull)sender;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -362,6 +421,21 @@ SWIFT_CLASS("_TtC12Shop_Hosting22storeItemTableViewCell")
 - (IBAction)minusItem:(UIButton * _Nonnull)sender;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified numItem;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC12Shop_Hosting30storeOrdersTableViewController")
+@interface storeOrdersTableViewController : UITableViewController
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (IBAction)backButton:(UIBarButtonItem * _Nonnull)sender;
+- (void)didReceiveMemoryWarning;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 

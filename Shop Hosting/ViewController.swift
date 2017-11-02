@@ -10,9 +10,22 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
         // Do any additional setup after loading the view, typically from a nib.
         ref = Database.database().reference()
     }
@@ -29,6 +42,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var textFieldPassword: UITextField!
     
     @IBOutlet weak var labelMessage: UILabel!
+    
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
+    
     @IBAction func buttonRegister(_ sender: UIButton) {
         let email = textFieldEmail.text
         let password = textFieldPassword.text

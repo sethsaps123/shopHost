@@ -14,6 +14,7 @@ class referralViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
         ref = Database.database().reference()
         // Do any additional setup after loading the view.
     }
@@ -32,38 +33,75 @@ class referralViewController: UIViewController {
     @IBOutlet weak var referralTextField: UITextField!
     
     @IBAction func enterRefferalButton(_ sender: UIButton) {
-        ref.child("shops").observeSingleEvent(of: .value, with: {(snapshot) in
-            
-            if snapshot.hasChild(self.referralTextField.text!) {
-               
-                self.ref.child("shops").child(self.referralTextField.text!).observeSingleEvent(of: .value, with: {(snapshot) in
-                       let value = snapshot.value as? NSDictionary
-                    let shopOwner = value?["shopOwner"] as? String ?? ""
-                    print(shopOwner)
-                    if (shopOwner == Auth.auth().currentUser?.uid) {
-                        self.referralStatusLabel.text = "Cannot add your own shop, try again"
-                        print("cannot join your own shop")
-                        return
-                    }
-                    else {
-                       
-                        let value = ["numOrders" : 0]
-                        self.ref.child("shops").child(self.referralTextField.text!).child("shopMembers").child((Auth.auth().currentUser?.uid)!).setValue(value)
-                        self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserBelongsTo").child(self.referralTextField.text!).setValue(true)
-                    
-                        
-                        self.referralStatusLabel.text = "Shop added successfully!"
-                        self.dismiss(animated: true, completion: nil)
-                    }
-                    
-                    })
-                
+        ref.child("shops").child(self.referralTextField.text!).observeSingleEvent(of: .value, with: {(snapshot) in
+            //if the shop doesn't exist
+            if !snapshot.exists() {
+                self.referralStatusLabel.text = "Shop does not exist"
+                return
             }
+                //if the shop exists and already has shopMembers node
+            else if snapshot.hasChild("shopMembers") {
+                //check if the user already owns this shop
+                if let dict = snapshot.value as? [String : AnyObject] {
+                    if let owner = dict["shopOwner"] as? String {
+                        if owner == Auth.auth().currentUser?.uid {
+                            self.referralStatusLabel.text = "Cannot add your own shop"
+                            return
+                        }
+                    }
+                }
+                //snapshot shop members
+                    self.ref.child("shops").child(self.referralTextField.text!).child("shopMembers").observeSingleEvent(of: .value, with: {(snapshot) in
+                        //if the user is already a members
+                        if snapshot.hasChild((Auth.auth().currentUser?.uid)!) {
+                            self.referralStatusLabel.text = "This shop has already been added"
+                        }
+                            //if the user is not already a member
+                        else {
+                           //set the value of the member as the user
+                            self.ref.child("shops").child(self.referralTextField.text!).child("shopMembers").child((Auth.auth().currentUser?.uid)!).setValue(["numOrders" : 0])
+                            //check if the user already belongs to any shops
+                            self.addShopToUsersShops()
+                            self.dismiss(animated: true, completion: nil)
+                            return
+                        }
+                    })
+            }
+                //if the shop does not already have shop members, add node w user
             else {
-                    self.referralStatusLabel.text = "Incorrect Referral code. Try again"
+                //check if the user already owns this shop
+                if let dict = snapshot.value as? [String : AnyObject] {
+                    if let owner = dict["shopOwner"] as? String {
+                        if owner == Auth.auth().currentUser?.uid {
+                            self.referralStatusLabel.text = "Cannot add your own shop"
+                            return
+                        }
+                    }
+                }
+                self.ref.child("shops").child(self.referralTextField.text!).child("shopMembers").child((Auth.auth().currentUser?.uid)!).setValue(["numOrders" : 0])
+                self.addShopToUsersShops()
+                self.dismiss(animated: true, completion: nil)
+                return
+            }
+            
+        })
+    }
+        
+    func addShopToUsersShops() {
+        self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserBelongsTo").observeSingleEvent(of: .value, with: {(snapshot) in
+            if snapshot.exists() {
+                //if the user belongs to a shop, update the value
+                self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserBelongsTo").updateChildValues([self.referralTextField.text! : true])
+            }
+                //if the user does not already belong to a shop
+            else {
+                self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserBelongsTo").setValue([self.referralTextField.text! : true])
             }
         })
     }
+    
+    
+        
     @IBOutlet weak var referralStatusLabel: UILabel!
     
     

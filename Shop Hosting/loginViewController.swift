@@ -14,6 +14,19 @@ class loginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "detroitSkyline.jpg")
+        self.view.insertSubview(backgroundImage, at: 0)
+        self.emailLogin.alpha = 0.5
+        self.passwordLogin.alpha = 0.5
+        self.appNameLabel.textColor = UIColor.white
+        self.appDetailLabel.textColor = UIColor.white
+        self.noAccountLabel.textColor = UIColor.white
+        /*
+        backgroundImage.image = backgroundImage.image!.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        backgroundImage.tintColor = UIColor.blue
+ */
         // Do any additional setup after loading the view.
     }
 
@@ -21,8 +34,12 @@ class loginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBOutlet weak var appNameLabel: UILabel!
+    @IBOutlet weak var appDetailLabel: UILabel!
+    @IBOutlet weak var noAccountLabel: UILabel!
     
     @IBAction func signIn(_ sender: UIButton) {
+        
         if (self.emailLogin.text == "" || self.passwordLogin.text == "") {
             
             //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in
@@ -64,6 +81,8 @@ class loginViewController: UIViewController {
     @IBOutlet weak var emailLogin: UITextField!
     
     @IBOutlet weak var passwordLogin: UITextField!
+    
+    
     /*
     // MARK: - Navigation
 

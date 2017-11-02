@@ -1,0 +1,682 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "referralViewController"
+provides-nominal:
+- "12Shop_Hosting22referralViewControllerC"
+provides-member:
+- ["12Shop_Hosting22referralViewControllerC", ""]
+provides-dynamic-lookup:
+- "cancel"
+- "didReceiveMemoryWarning"
+- "enterRefferalButton"
+- "referralStatusLabel"
+- "referralTextField"
+- "viewDidLoad"
+depends-top-level:
+- !private "!"
+- !private "=="
+- !private "AnyObject"
+- "AssignmentPrecedence"
+- !private "Auth"
+- !private "BooleanLiteralType"
+- !private "CastingPrecedence"
+- !private "Database"
+- "DatabaseReference"
+- "Dictionary"
+- !private "String"
+- !private "StringLiteralType"
+- "UIBarButtonItem"
+- "UIButton"
+- "UILabel"
+- "UITextField"
+- "UIViewController"
+- "referralViewController"
+depends-member:
+- !private ["So4AuthC", "auth"]
+- !private ["So4AuthC", "currentUser"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["s7CVarArgP", "Auth"]
+- !private ["s7CVarArgP", "Database"]
+- !private ["s7CVarArgP", "addShopToUsersShops"]
+- !private ["s7CVarArgP", "auth"]
+- !private ["s7CVarArgP", "child"]
+- !private ["s7CVarArgP", "currentUser"]
+- !private ["s7CVarArgP", "database"]
+- !private ["s7CVarArgP", "didReceiveMemoryWarning"]
+- !private ["s7CVarArgP", "dismiss"]
+- !private ["s7CVarArgP", "exists"]
+- !private ["s7CVarArgP", "hasChild"]
+- !private ["s7CVarArgP", "hideKeyboardWhenTappedAround"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "observeSingleEvent"]
+- !private ["s7CVarArgP", "ref"]
+- !private ["s7CVarArgP", "reference"]
+- !private ["s7CVarArgP", "referralStatusLabel"]
+- !private ["s7CVarArgP", "referralTextField"]
+- !private ["s7CVarArgP", "setValue"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "uid"]
+- !private ["s7CVarArgP", "updateChildValues"]
+- !private ["s7CVarArgP", "value"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- ["s7CVarArgP", ""]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "Auth"]
+- !private ["s28CustomDebugStringConvertibleP", "Database"]
+- !private ["s28CustomDebugStringConvertibleP", "addShopToUsersShops"]
+- !private ["s28CustomDebugStringConvertibleP", "auth"]
+- !private ["s28CustomDebugStringConvertibleP", "child"]
+- !private ["s28CustomDebugStringConvertibleP", "currentUser"]
+- !private ["s28CustomDebugStringConvertibleP", "database"]
+- !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s28CustomDebugStringConvertibleP", "dismiss"]
+- !private ["s28CustomDebugStringConvertibleP", "exists"]
+- !private ["s28CustomDebugStringConvertibleP", "hasChild"]
+- !private ["s28CustomDebugStringConvertibleP", "hideKeyboardWhenTappedAround"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "observeSingleEvent"]
+- !private ["s28CustomDebugStringConvertibleP", "ref"]
+- !private ["s28CustomDebugStringConvertibleP", "reference"]
+- !private ["s28CustomDebugStringConvertibleP", "referralStatusLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "referralTextField"]
+- !private ["s28CustomDebugStringConvertibleP", "setValue"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "uid"]
+- !private ["s28CustomDebugStringConvertibleP", "updateChildValues"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "Auth"]
+- !private ["s23CustomStringConvertibleP", "Database"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "addShopToUsersShops"]
+- !private ["s23CustomStringConvertibleP", "auth"]
+- !private ["s23CustomStringConvertibleP", "child"]
+- !private ["s23CustomStringConvertibleP", "currentUser"]
+- !private ["s23CustomStringConvertibleP", "database"]
+- !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s23CustomStringConvertibleP", "dismiss"]
+- !private ["s23CustomStringConvertibleP", "exists"]
+- !private ["s23CustomStringConvertibleP", "hasChild"]
+- !private ["s23CustomStringConvertibleP", "hideKeyboardWhenTappedAround"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "observeSingleEvent"]
+- !private ["s23CustomStringConvertibleP", "ref"]
+- !private ["s23CustomStringConvertibleP", "reference"]
+- !private ["s23CustomStringConvertibleP", "referralStatusLabel"]
+- !private ["s23CustomStringConvertibleP", "referralTextField"]
+- !private ["s23CustomStringConvertibleP", "setValue"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "uid"]
+- !private ["s23CustomStringConvertibleP", "updateChildValues"]
+- !private ["s23CustomStringConvertibleP", "value"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["SC13DataEventTypeO", "value"]
+- !private ["So12DataSnapshotC", "exists"]
+- !private ["So12DataSnapshotC", "hasChild"]
+- !private ["So12DataSnapshotC", "value"]
+- !private ["So8DatabaseC", "database"]
+- !private ["So8DatabaseC", "reference"]
+- !private ["So13DatabaseQueryC", "child"]
+- !private ["So13DatabaseQueryC", "observeSingleEvent"]
+- !private ["So13DatabaseQueryC", "setValue"]
+- !private ["So13DatabaseQueryC", "updateChildValues"]
+- !private ["So17DatabaseReferenceC", "child"]
+- !private ["So17DatabaseReferenceC", "observeSingleEvent"]
+- !private ["So17DatabaseReferenceC", "setValue"]
+- !private ["So17DatabaseReferenceC", "updateChildValues"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s10DictionaryV", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "Auth"]
+- !private ["s9EquatableP", "Database"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "addShopToUsersShops"]
+- !private ["s9EquatableP", "auth"]
+- !private ["s9EquatableP", "child"]
+- !private ["s9EquatableP", "currentUser"]
+- !private ["s9EquatableP", "database"]
+- !private ["s9EquatableP", "didReceiveMemoryWarning"]
+- !private ["s9EquatableP", "dismiss"]
+- !private ["s9EquatableP", "exists"]
+- !private ["s9EquatableP", "hasChild"]
+- !private ["s9EquatableP", "hideKeyboardWhenTappedAround"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "observeSingleEvent"]
+- !private ["s9EquatableP", "ref"]
+- !private ["s9EquatableP", "reference"]
+- !private ["s9EquatableP", "referralStatusLabel"]
+- !private ["s9EquatableP", "referralTextField"]
+- !private ["s9EquatableP", "setValue"]
+- !private ["s9EquatableP", "text"]
+- !private ["s9EquatableP", "uid"]
+- !private ["s9EquatableP", "updateChildValues"]
+- !private ["s9EquatableP", "value"]
+- !private ["s9EquatableP", "viewDidLoad"]
+- ["s9EquatableP", ""]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "Auth"]
+- !private ["s8HashableP", "Database"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "addShopToUsersShops"]
+- !private ["s8HashableP", "auth"]
+- !private ["s8HashableP", "child"]
+- !private ["s8HashableP", "currentUser"]
+- !private ["s8HashableP", "database"]
+- !private ["s8HashableP", "didReceiveMemoryWarning"]
+- !private ["s8HashableP", "dismiss"]
+- !private ["s8HashableP", "exists"]
+- !private ["s8HashableP", "hasChild"]
+- !private ["s8HashableP", "hideKeyboardWhenTappedAround"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "observeSingleEvent"]
+- !private ["s8HashableP", "ref"]
+- !private ["s8HashableP", "reference"]
+- !private ["s8HashableP", "referralStatusLabel"]
+- !private ["s8HashableP", "referralTextField"]
+- !private ["s8HashableP", "setValue"]
+- !private ["s8HashableP", "text"]
+- !private ["s8HashableP", "uid"]
+- !private ["s8HashableP", "updateChildValues"]
+- !private ["s8HashableP", "value"]
+- !private ["s8HashableP", "viewDidLoad"]
+- ["s8HashableP", ""]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "Auth"]
+- !private ["So8NSCodingP", "Database"]
+- !private ["So8NSCodingP", "addShopToUsersShops"]
+- !private ["So8NSCodingP", "didReceiveMemoryWarning"]
+- !private ["So8NSCodingP", "dismiss"]
+- !private ["So8NSCodingP", "hideKeyboardWhenTappedAround"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "ref"]
+- !private ["So8NSCodingP", "referralStatusLabel"]
+- !private ["So8NSCodingP", "referralTextField"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- ["So8NSCodingP", ""]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "Auth"]
+- !private ["So26NSExtensionRequestHandlingP", "Database"]
+- !private ["So26NSExtensionRequestHandlingP", "addShopToUsersShops"]
+- !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
+- !private ["So26NSExtensionRequestHandlingP", "dismiss"]
+- !private ["So26NSExtensionRequestHandlingP", "hideKeyboardWhenTappedAround"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "ref"]
+- !private ["So26NSExtensionRequestHandlingP", "referralStatusLabel"]
+- !private ["So26NSExtensionRequestHandlingP", "referralTextField"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "AnyObject"]
+- !private ["So8NSObjectC", "Auth"]
+- !private ["So8NSObjectC", "Database"]
+- ["So8NSObjectC", "DatabaseReference"]
+- !private ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UIBarButtonItem"]
+- ["So8NSObjectC", "UIButton"]
+- ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "UITextField"]
+- ["So8NSObjectC", "addShopToUsersShops"]
+- !private ["So8NSObjectC", "auth"]
+- ["So8NSObjectC", "cancel"]
+- !private ["So8NSObjectC", "child"]
+- !private ["So8NSObjectC", "currentUser"]
+- !private ["So8NSObjectC", "database"]
+- ["So8NSObjectC", "didReceiveMemoryWarning"]
+- !private ["So8NSObjectC", "dismiss"]
+- ["So8NSObjectC", "enterRefferalButton"]
+- !private ["So8NSObjectC", "exists"]
+- !private ["So8NSObjectC", "hasChild"]
+- !private ["So8NSObjectC", "hideKeyboardWhenTappedAround"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "observeSingleEvent"]
+- ["So8NSObjectC", "ref"]
+- !private ["So8NSObjectC", "reference"]
+- ["So8NSObjectC", "referralStatusLabel"]
+- ["So8NSObjectC", "referralTextField"]
+- !private ["So8NSObjectC", "setValue"]
+- !private ["So8NSObjectC", "text"]
+- !private ["So8NSObjectC", "uid"]
+- !private ["So8NSObjectC", "updateChildValues"]
+- !private ["So8NSObjectC", "value"]
+- ["So8NSObjectC", "viewDidLoad"]
+- !private ["So16NSObjectProtocolP", "Auth"]
+- !private ["So16NSObjectProtocolP", "Database"]
+- !private ["So16NSObjectProtocolP", "addShopToUsersShops"]
+- !private ["So16NSObjectProtocolP", "auth"]
+- !private ["So16NSObjectProtocolP", "child"]
+- !private ["So16NSObjectProtocolP", "currentUser"]
+- !private ["So16NSObjectProtocolP", "database"]
+- !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
+- !private ["So16NSObjectProtocolP", "dismiss"]
+- !private ["So16NSObjectProtocolP", "exists"]
+- !private ["So16NSObjectProtocolP", "hasChild"]
+- !private ["So16NSObjectProtocolP", "hideKeyboardWhenTappedAround"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "observeSingleEvent"]
+- !private ["So16NSObjectProtocolP", "ref"]
+- !private ["So16NSObjectProtocolP", "reference"]
+- !private ["So16NSObjectProtocolP", "referralStatusLabel"]
+- !private ["So16NSObjectProtocolP", "referralTextField"]
+- !private ["So16NSObjectProtocolP", "setValue"]
+- !private ["So16NSObjectProtocolP", "text"]
+- !private ["So16NSObjectProtocolP", "uid"]
+- !private ["So16NSObjectProtocolP", "updateChildValues"]
+- !private ["So16NSObjectProtocolP", "value"]
+- !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "value"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So21UIAppearanceContainerP", "Auth"]
+- !private ["So21UIAppearanceContainerP", "Database"]
+- !private ["So21UIAppearanceContainerP", "addShopToUsersShops"]
+- !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
+- !private ["So21UIAppearanceContainerP", "dismiss"]
+- !private ["So21UIAppearanceContainerP", "hideKeyboardWhenTappedAround"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "ref"]
+- !private ["So21UIAppearanceContainerP", "referralStatusLabel"]
+- !private ["So21UIAppearanceContainerP", "referralTextField"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So18UIContentContainerP", "Auth"]
+- !private ["So18UIContentContainerP", "Database"]
+- !private ["So18UIContentContainerP", "addShopToUsersShops"]
+- !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
+- !private ["So18UIContentContainerP", "dismiss"]
+- !private ["So18UIContentContainerP", "hideKeyboardWhenTappedAround"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "ref"]
+- !private ["So18UIContentContainerP", "referralStatusLabel"]
+- !private ["So18UIContentContainerP", "referralTextField"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- ["So18UIContentContainerP", ""]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So9UIControlC", "text"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So18UIFocusEnvironmentP", "Auth"]
+- !private ["So18UIFocusEnvironmentP", "Database"]
+- !private ["So18UIFocusEnvironmentP", "addShopToUsersShops"]
+- !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UIFocusEnvironmentP", "dismiss"]
+- !private ["So18UIFocusEnvironmentP", "hideKeyboardWhenTappedAround"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "ref"]
+- !private ["So18UIFocusEnvironmentP", "referralStatusLabel"]
+- !private ["So18UIFocusEnvironmentP", "referralTextField"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So10UIKeyInputP", "text"]
+- !private ["So7UILabelC", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "Auth"]
+- !private ["So30UIPasteConfigurationSupportingP", "Database"]
+- !private ["So30UIPasteConfigurationSupportingP", "addShopToUsersShops"]
+- !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
+- !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
+- !private ["So30UIPasteConfigurationSupportingP", "hideKeyboardWhenTappedAround"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "ref"]
+- !private ["So30UIPasteConfigurationSupportingP", "referralStatusLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "referralTextField"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So11UIResponderC", "AnyObject"]
+- !private ["So11UIResponderC", "Auth"]
+- !private ["So11UIResponderC", "Database"]
+- ["So11UIResponderC", "DatabaseReference"]
+- !private ["So11UIResponderC", "String"]
+- ["So11UIResponderC", "UIBarButtonItem"]
+- ["So11UIResponderC", "UIButton"]
+- ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "UITextField"]
+- ["So11UIResponderC", "addShopToUsersShops"]
+- ["So11UIResponderC", "cancel"]
+- ["So11UIResponderC", "didReceiveMemoryWarning"]
+- !private ["So11UIResponderC", "dismiss"]
+- ["So11UIResponderC", "enterRefferalButton"]
+- !private ["So11UIResponderC", "hideKeyboardWhenTappedAround"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "ref"]
+- ["So11UIResponderC", "referralStatusLabel"]
+- ["So11UIResponderC", "referralTextField"]
+- !private ["So11UIResponderC", "text"]
+- ["So11UIResponderC", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "Auth"]
+- !private ["So30UIResponderStandardEditActionsP", "Database"]
+- !private ["So30UIResponderStandardEditActionsP", "addShopToUsersShops"]
+- !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
+- !private ["So30UIResponderStandardEditActionsP", "dismiss"]
+- !private ["So30UIResponderStandardEditActionsP", "hideKeyboardWhenTappedAround"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "ref"]
+- !private ["So30UIResponderStandardEditActionsP", "referralStatusLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "referralTextField"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So16UIStateRestoringP", "Auth"]
+- !private ["So16UIStateRestoringP", "Database"]
+- !private ["So16UIStateRestoringP", "addShopToUsersShops"]
+- !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
+- !private ["So16UIStateRestoringP", "dismiss"]
+- !private ["So16UIStateRestoringP", "hideKeyboardWhenTappedAround"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "ref"]
+- !private ["So16UIStateRestoringP", "referralStatusLabel"]
+- !private ["So16UIStateRestoringP", "referralTextField"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So15UITextDraggableP", "text"]
+- !private ["So15UITextDroppableP", "text"]
+- !private ["So11UITextFieldC", "text"]
+- !private ["So11UITextInputP", "text"]
+- !private ["So17UITextInputTraitsP", "text"]
+- !private ["So34UITextPasteConfigurationSupportingP", "text"]
+- !private ["So18UITraitEnvironmentP", "Auth"]
+- !private ["So18UITraitEnvironmentP", "Database"]
+- !private ["So18UITraitEnvironmentP", "addShopToUsersShops"]
+- !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UITraitEnvironmentP", "dismiss"]
+- !private ["So18UITraitEnvironmentP", "hideKeyboardWhenTappedAround"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "ref"]
+- !private ["So18UITraitEnvironmentP", "referralStatusLabel"]
+- !private ["So18UITraitEnvironmentP", "referralTextField"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So6UIViewC", "text"]
+- !private ["So16UIViewControllerC", "AnyObject"]
+- !private ["So16UIViewControllerC", "Auth"]
+- !private ["So16UIViewControllerC", "Database"]
+- ["So16UIViewControllerC", "DatabaseReference"]
+- !private ["So16UIViewControllerC", "String"]
+- ["So16UIViewControllerC", "UIBarButtonItem"]
+- ["So16UIViewControllerC", "UIButton"]
+- ["So16UIViewControllerC", "UILabel"]
+- ["So16UIViewControllerC", "UITextField"]
+- ["So16UIViewControllerC", "addShopToUsersShops"]
+- ["So16UIViewControllerC", "cancel"]
+- ["So16UIViewControllerC", "didReceiveMemoryWarning"]
+- !private ["So16UIViewControllerC", "dismiss"]
+- ["So16UIViewControllerC", "enterRefferalButton"]
+- !private ["So16UIViewControllerC", "hideKeyboardWhenTappedAround"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "ref"]
+- ["So16UIViewControllerC", "referralStatusLabel"]
+- ["So16UIViewControllerC", "referralTextField"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- ["So16UIViewControllerC", ""]
+- !private ["So4UserC", "uid"]
+- !private ["So8UserInfoP", "uid"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "subscript"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Auth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Database"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addShopToUsersShops"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "child"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "database"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "exists"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hasChild"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hideKeyboardWhenTappedAround"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "observeSingleEvent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ref"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reference"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "referralStatusLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "referralTextField"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "updateChildValues"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["12Shop_Hosting22referralViewControllerC", "AnyObject"]
+- !private ["12Shop_Hosting22referralViewControllerC", "Auth"]
+- !private ["12Shop_Hosting22referralViewControllerC", "Database"]
+- ["12Shop_Hosting22referralViewControllerC", "DatabaseReference"]
+- !private ["12Shop_Hosting22referralViewControllerC", "String"]
+- ["12Shop_Hosting22referralViewControllerC", "UIBarButtonItem"]
+- ["12Shop_Hosting22referralViewControllerC", "UIButton"]
+- ["12Shop_Hosting22referralViewControllerC", "UILabel"]
+- ["12Shop_Hosting22referralViewControllerC", "UITextField"]
+- ["12Shop_Hosting22referralViewControllerC", "addShopToUsersShops"]
+- ["12Shop_Hosting22referralViewControllerC", "cancel"]
+- ["12Shop_Hosting22referralViewControllerC", "deinit"]
+- ["12Shop_Hosting22referralViewControllerC", "didReceiveMemoryWarning"]
+- !private ["12Shop_Hosting22referralViewControllerC", "dismiss"]
+- ["12Shop_Hosting22referralViewControllerC", "enterRefferalButton"]
+- !private ["12Shop_Hosting22referralViewControllerC", "hideKeyboardWhenTappedAround"]
+- ["12Shop_Hosting22referralViewControllerC", "init"]
+- ["12Shop_Hosting22referralViewControllerC", "ref"]
+- ["12Shop_Hosting22referralViewControllerC", "referralStatusLabel"]
+- ["12Shop_Hosting22referralViewControllerC", "referralTextField"]
+- ["12Shop_Hosting22referralViewControllerC", "viewDidLoad"]
+depends-nominal:
+- !private "So4AuthC"
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "SC13DataEventTypeO"
+- !private "So12DataSnapshotC"
+- !private "So8DatabaseC"
+- !private "So13DatabaseQueryC"
+- !private "So17DatabaseReferenceC"
+- !private "s9DecodableP"
+- !private "s10DictionaryV"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So26NSExtensionRequestHandlingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So10UIKeyInputP"
+- !private "So7UILabelC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So16UIStateRestoringP"
+- !private "So15UITextDraggableP"
+- !private "So15UITextDroppableP"
+- !private "So11UITextFieldC"
+- !private "So11UITextInputP"
+- !private "So17UITextInputTraitsP"
+- !private "So34UITextPasteConfigurationSupportingP"
+- "So18UITraitEnvironmentP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "So4UserC"
+- !private "So8UserInfoP"
+- !private "s23_BidirectionalIndexableP"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s26_RangeReplaceableIndexableP"
+- !private "s16_SwiftStringViewP"
+- "12Shop_Hosting22referralViewControllerC"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FIRInstanceID.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FirebaseInstanceID.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRMutableData.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRDatabaseReference.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAuthAPNSTokenType.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRDataEventType.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseCore/FirebaseCore/FirebaseCore.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRDatabase.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FirebaseDatabase.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Firebase/Core/Sources/Firebase.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAuthUIDelegate.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalytics+AppDelegate.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRServerValue.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAuth.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FirebaseAuth.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAuthCredential.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRPhoneAuthCredential.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseCore/FirebaseCore/FIRLoggerLevel.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FirebaseAuthVersion.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseCore/FirebaseCore/FIRConfiguration.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRConfiguration.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseCore/FirebaseCore/FIRAnalyticsConfiguration.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalyticsConfiguration.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRUserInfo.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAdditionalUserInfo.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseCore/FirebaseCore/FIRApp.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRApp.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/Shop Hosting-Bridging-Header.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIROAuthProvider.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRGitHubAuthProvider.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRGoogleAuthProvider.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRPhoneAuthProvider.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRFacebookAuthProvider.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIREmailAuthProvider.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRTwitterAuthProvider.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Shop Hosting/SWRevealViewController.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRUser.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalytics.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FirebaseAnalytics.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRParameterNames.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIREventNames.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRUserPropertyNames.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRActionCodeSettings.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseCore/FirebaseCore/FIROptions.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIROptions.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAuthErrors.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAuthDataResult.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRTransactionResult.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRDataSnapshot.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseCore/FirebaseCore/FIRCoreSwiftNameSupport.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRDatabaseSwiftNameSupport.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAuth/FirebaseAuth/FIRAuthSwiftNameSupport.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseAnalytics/FirebaseAnalytics/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRDatabaseQuery.h"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Firebase/Core/Sources/module.modulemap"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+interface-hash: "c499e7705f213de3ccadf23fed0f298c"

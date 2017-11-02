@@ -12,6 +12,7 @@ class createShopTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         ref = Database.database().reference()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -21,7 +22,7 @@ class createShopTableViewController: UITableViewController {
     }
     
     func randomAlphaNumericString(length: Int) -> String {
-        let allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let allowedChars = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ123456789"
         let allowedCharsCount = UInt32(allowedChars.characters.count)
         var randomString = ""
         
@@ -53,7 +54,15 @@ class createShopTableViewController: UITableViewController {
         
         self.ref.child("shops").child(referralCode).child("shopItems").setValue(itemData)
         
-        self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserOwns").setValue(values2)
+        self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserOwns").observeSingleEvent(of: .value, with: {(snapshot) in
+            if snapshot.exists() {
+                self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserOwns").updateChildValues(values2)
+            }
+            else {
+                self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserOwns").setValue(values2)
+            }
+        })
+        //self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserOwns").setValue(values2)
         
         let alertController = UIAlertController(title: "Shop Added", message: "Here is your referral code: \(referralCode)", preferredStyle: .alert)
         

@@ -8,9 +8,11 @@ provides-member:
 provides-dynamic-lookup:
 - "awakeFromNib"
 - "setSelected"
+- "shopNameTextField"
 depends-top-level:
 - "Bool"
 - "UITableViewCell"
+- "UITextField"
 - "shopTitleTableTableViewCell"
 depends-member:
 - !private ["So15CALayerDelegateP", "awakeFromNib"]
@@ -42,9 +44,11 @@ depends-member:
 - !private ["So8NSCodingP", "setSelected"]
 - ["So8NSCodingP", ""]
 - ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "UITextField"]
 - ["So8NSObjectC", "awakeFromNib"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "setSelected"]
+- ["So8NSObjectC", "shopNameTextField"]
 - !private ["So16NSObjectProtocolP", "awakeFromNib"]
 - !private ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "setSelected"]
@@ -86,26 +90,32 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "setSelected"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "UITextField"]
 - ["So11UIResponderC", "awakeFromNib"]
 - ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "setSelected"]
+- ["So11UIResponderC", "shopNameTextField"]
 - !private ["So30UIResponderStandardEditActionsP", "awakeFromNib"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "setSelected"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - ["So15UITableViewCellC", "Bool"]
+- ["So15UITableViewCellC", "UITextField"]
 - ["So15UITableViewCellC", "awakeFromNib"]
 - ["So15UITableViewCellC", "init"]
 - ["So15UITableViewCellC", "setSelected"]
+- ["So15UITableViewCellC", "shopNameTextField"]
 - ["So15UITableViewCellC", ""]
 - !private ["So18UITraitEnvironmentP", "awakeFromNib"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "setSelected"]
 - ["So18UITraitEnvironmentP", ""]
 - ["So6UIViewC", "Bool"]
+- ["So6UIViewC", "UITextField"]
 - ["So6UIViewC", "awakeFromNib"]
 - ["So6UIViewC", "init"]
 - ["So6UIViewC", "setSelected"]
+- ["So6UIViewC", "shopNameTextField"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "awakeFromNib"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "setSelected"]
@@ -115,10 +125,12 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setSelected"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - ["12Shop_Hosting014shopTitleTableE8ViewCellC", "Bool"]
+- ["12Shop_Hosting014shopTitleTableE8ViewCellC", "UITextField"]
 - ["12Shop_Hosting014shopTitleTableE8ViewCellC", "awakeFromNib"]
 - ["12Shop_Hosting014shopTitleTableE8ViewCellC", "deinit"]
 - ["12Shop_Hosting014shopTitleTableE8ViewCellC", "init"]
 - ["12Shop_Hosting014shopTitleTableE8ViewCellC", "setSelected"]
+- ["12Shop_Hosting014shopTitleTableE8ViewCellC", "shopNameTextField"]
 depends-nominal:
 - "So15CALayerDelegateP"
 - "s7CVarArgP"
@@ -221,4 +233,4 @@ depends-external:
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Firebase/Core/Sources/module.modulemap"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
-interface-hash: "024c78d4d873b6365a37fa65a969bbe3"
+interface-hash: "ff5ce34425fa4a34d789a3df8dda4f22"
