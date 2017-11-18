@@ -70,7 +70,19 @@ class storeOrdersTableViewController: UITableViewController {
      
      return cell
      }
- 
+    
+
+    
+    @IBAction func markDeliveredBarButton(_ sender: UIBarButtonItem) {
+        if sender.title == "Mark as Delivered" {
+            sender.title = "Delivered!"
+            ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopOrders").child(orderName).updateChildValues(["delivered" : true])
+        }
+        else if sender.title == "Delivered!" {
+            sender.title = "Mark as Delivered"
+            ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopOrders").child(orderName).updateChildValues(["delivered" : false])
+        }
+    }
     
     /*
      // Override to support conditional editing of the table view.

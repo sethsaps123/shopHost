@@ -32,6 +32,8 @@ class referralViewController: UIViewController {
     
     @IBOutlet weak var referralTextField: UITextField!
     
+    var shopName: String!
+    
     @IBAction func enterRefferalButton(_ sender: UIButton) {
         ref.child("shops").child(self.referralTextField.text!).observeSingleEvent(of: .value, with: {(snapshot) in
             //if the shop doesn't exist
@@ -48,6 +50,9 @@ class referralViewController: UIViewController {
                             self.referralStatusLabel.text = "Cannot add your own shop"
                             return
                         }
+                    }
+                    if let name = dict["shopName"] as? String {
+                        self.shopName = name
                     }
                 }
                 //snapshot shop members
@@ -77,6 +82,9 @@ class referralViewController: UIViewController {
                             return
                         }
                     }
+                    if let name = dict["shopName"] as? String {
+                        self.shopName = name
+                    }
                 }
                 self.ref.child("shops").child(self.referralTextField.text!).child("shopMembers").child((Auth.auth().currentUser?.uid)!).setValue(["numOrders" : 0])
                 self.addShopToUsersShops()
@@ -91,11 +99,11 @@ class referralViewController: UIViewController {
         self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserBelongsTo").observeSingleEvent(of: .value, with: {(snapshot) in
             if snapshot.exists() {
                 //if the user belongs to a shop, update the value
-                self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserBelongsTo").updateChildValues([self.referralTextField.text! : true])
+                self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserBelongsTo").updateChildValues([self.referralTextField.text! : self.shopName])
             }
                 //if the user does not already belong to a shop
             else {
-                self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserBelongsTo").setValue([self.referralTextField.text! : true])
+                self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserBelongsTo").setValue([self.referralTextField.text! : self.shopName])
             }
         })
     }

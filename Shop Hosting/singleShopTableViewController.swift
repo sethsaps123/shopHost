@@ -13,7 +13,7 @@ class singleShopTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = shopName
+        self.title = shopActualName
         ref = Database.database().reference()
         populateTable()
         // Uncomment the following line to preserve selection between presentations
@@ -54,6 +54,8 @@ class singleShopTableViewController: UITableViewController {
     var numRows: Int = 1
     
     var shopName: String!
+    
+    var shopActualName : String!
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,6 +63,7 @@ class singleShopTableViewController: UITableViewController {
         let cell = newCell as! storeItemTableViewCell
         if !itemNames.isEmpty {
             cell.itemName.text = (String)(describing: itemNames[indexPath.item].key)
+            cell.itemPrice.text = "$" + (String)(describing: (itemNames[indexPath.item].value)!)
         }
         
         
@@ -80,9 +83,11 @@ class singleShopTableViewController: UITableViewController {
         })
     }
     
+    var order : [String : Int] = [:]
+    
     @IBAction func checkoutButton(_ sender: UIBarButtonItem) {
-        let newOrder = getCellsData()
-        if newOrder.isEmpty {
+        order = getCellsData()
+        if order.isEmpty {
             let refreshAlert = UIAlertController(title: "Cannot checkout", message: "Must have at least 1 item selected", preferredStyle: UIAlertControllerStyle.alert)
             
             refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
@@ -96,45 +101,28 @@ class singleShopTableViewController: UITableViewController {
             present(refreshAlert, animated: true, completion: nil)
         }
         else {
-            let confirmAlert = UIAlertController(title: "Checkout", message: "Are you sure you would like to checkout?", preferredStyle: UIAlertControllerStyle.alert)
-            
-            confirmAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
-                //handle ok actions here
-                let time = Date.init().description
-                self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("userOrders").child(time).setValue(newOrder)
-                //get current shop owner to set his current shop orders
-                self.ref.child("shops").child(self.shopName).observeSingleEvent(of: .value, with: {(snapshot) in
-                    if let dict = snapshot.value as? [String : AnyObject] {
-                        if let shopOwner = dict["shopOwner"] as? String {
-                            self.ref.child("users").child(shopOwner).child("shopOrders").child((Auth.auth().currentUser?.uid)! + time).child("order").setValue(newOrder)
-                            
-                            self.ref.child("users").child(shopOwner).child("shopOrders").child((Auth.auth().currentUser?.uid)! + time).child("time").setValue(time)
-                            
-                            self.ref.child("users").child(shopOwner).child("shopOrders").child((Auth.auth().currentUser?.uid)! + time).updateChildValues(["delivered" : false])
-                        }
-                    }
-                    self.dismiss(animated: true, completion: nil)
-                })
-            }))
-            
-            confirmAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
-                
-            }))
-            
-            present(confirmAlert, animated: true, completion: nil)
-
+            performSegue(withIdentifier: "toDeliveryDetail", sender: nil)
         }
     }
     
-    func getCellsData()->[String : Double] {
-        var dataDictionary: [String : Double] = [:]
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDeliveryDetail" {
+            if let vc = segue.destination as? deliveryDetailViewController {
+                vc.shopName = shopName
+                vc.order = order
+            }
+        }
+    }
+    
+    func getCellsData()->[String : Int] {
+        var dataDictionary: [String : Int] = [:]
         for section in 0 ..< self.tableView.numberOfSections {
             for row in 0 ..< self.tableView.numberOfRows(inSection: section) {
                 let indexPath = NSIndexPath(row: row, section: section)
                 
                 let cell = self.tableView.cellForRow(at: indexPath as IndexPath) as! storeItemTableViewCell
                 if cell.itemCount > 0 {
-                    dataDictionary[cell.itemName.text!] = (Double)(cell.itemCount)
+                    dataDictionary[cell.itemName.text!] = (Int)(cell.itemCount)
                 }
             }
         }

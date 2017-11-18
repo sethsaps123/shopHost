@@ -10,9 +10,11 @@ provides-member:
 - ["So16UIViewControllerC", "dismissKeyboard"]
 provides-dynamic-lookup:
 - "buttonRegister"
+- "cancelBarButton"
 - "didReceiveMemoryWarning"
 - "dismissKeyboard"
 - "labelMessage"
+- "phoneNumberTextField"
 - "textFieldEmail"
 - "textFieldPassword"
 - "viewDidLoad"
@@ -27,6 +29,7 @@ depends-top-level:
 - "DatabaseReference"
 - "Dictionary"
 - !private "StringLiteralType"
+- "UIBarButtonItem"
 - "UIButton"
 - "UILabel"
 - !private "UITapGestureRecognizer"
@@ -53,6 +56,7 @@ depends-member:
 - !private ["s7CVarArgP", "createUser"]
 - !private ["s7CVarArgP", "database"]
 - !private ["s7CVarArgP", "didReceiveMemoryWarning"]
+- !private ["s7CVarArgP", "dismiss"]
 - !private ["s7CVarArgP", "dismissKeyboard"]
 - !private ["s7CVarArgP", "endEditing"]
 - !private ["s7CVarArgP", "hideKeyboardWhenTappedAround"]
@@ -82,6 +86,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "createUser"]
 - !private ["s28CustomDebugStringConvertibleP", "database"]
 - !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s28CustomDebugStringConvertibleP", "dismiss"]
 - !private ["s28CustomDebugStringConvertibleP", "dismissKeyboard"]
 - !private ["s28CustomDebugStringConvertibleP", "endEditing"]
 - !private ["s28CustomDebugStringConvertibleP", "hideKeyboardWhenTappedAround"]
@@ -114,6 +119,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "createUser"]
 - !private ["s23CustomStringConvertibleP", "database"]
 - !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s23CustomStringConvertibleP", "dismiss"]
 - !private ["s23CustomStringConvertibleP", "dismissKeyboard"]
 - !private ["s23CustomStringConvertibleP", "endEditing"]
 - !private ["s23CustomStringConvertibleP", "hideKeyboardWhenTappedAround"]
@@ -152,6 +158,7 @@ depends-member:
 - !private ["s9EquatableP", "createUser"]
 - !private ["s9EquatableP", "database"]
 - !private ["s9EquatableP", "didReceiveMemoryWarning"]
+- !private ["s9EquatableP", "dismiss"]
 - !private ["s9EquatableP", "dismissKeyboard"]
 - !private ["s9EquatableP", "endEditing"]
 - !private ["s9EquatableP", "hideKeyboardWhenTappedAround"]
@@ -184,6 +191,7 @@ depends-member:
 - !private ["s8HashableP", "createUser"]
 - !private ["s8HashableP", "database"]
 - !private ["s8HashableP", "didReceiveMemoryWarning"]
+- !private ["s8HashableP", "dismiss"]
 - !private ["s8HashableP", "dismissKeyboard"]
 - !private ["s8HashableP", "endEditing"]
 - !private ["s8HashableP", "hideKeyboardWhenTappedAround"]
@@ -209,6 +217,7 @@ depends-member:
 - !private ["So8NSCodingP", "UIViewController"]
 - !private ["So8NSCodingP", "addGestureRecognizer"]
 - !private ["So8NSCodingP", "didReceiveMemoryWarning"]
+- !private ["So8NSCodingP", "dismiss"]
 - !private ["So8NSCodingP", "dismissKeyboard"]
 - !private ["So8NSCodingP", "endEditing"]
 - !private ["So8NSCodingP", "hideKeyboardWhenTappedAround"]
@@ -228,6 +237,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "UITapGestureRecognizer"]
 - !private ["So26NSExtensionRequestHandlingP", "UIViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
+- !private ["So26NSExtensionRequestHandlingP", "dismiss"]
 - !private ["So26NSExtensionRequestHandlingP", "dismissKeyboard"]
 - !private ["So26NSExtensionRequestHandlingP", "hideKeyboardWhenTappedAround"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
@@ -245,6 +255,7 @@ depends-member:
 - !private ["So8NSObjectC", "Auth"]
 - !private ["So8NSObjectC", "Database"]
 - ["So8NSObjectC", "DatabaseReference"]
+- ["So8NSObjectC", "UIBarButtonItem"]
 - ["So8NSObjectC", "UIButton"]
 - ["So8NSObjectC", "UILabel"]
 - !private ["So8NSObjectC", "UITapGestureRecognizer"]
@@ -254,17 +265,20 @@ depends-member:
 - !private ["So8NSObjectC", "addGestureRecognizer"]
 - !private ["So8NSObjectC", "auth"]
 - ["So8NSObjectC", "buttonRegister"]
+- ["So8NSObjectC", "cancelBarButton"]
 - !private ["So8NSObjectC", "cancelsTouchesInView"]
 - !private ["So8NSObjectC", "child"]
 - !private ["So8NSObjectC", "createUser"]
 - !private ["So8NSObjectC", "database"]
 - ["So8NSObjectC", "didReceiveMemoryWarning"]
+- !private ["So8NSObjectC", "dismiss"]
 - ["So8NSObjectC", "dismissKeyboard"]
 - !private ["So8NSObjectC", "endEditing"]
 - ["So8NSObjectC", "hideKeyboardWhenTappedAround"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "labelMessage"]
 - !private ["So8NSObjectC", "performSegue"]
+- ["So8NSObjectC", "phoneNumberTextField"]
 - ["So8NSObjectC", "ref"]
 - !private ["So8NSObjectC", "reference"]
 - !private ["So8NSObjectC", "setValue"]
@@ -285,6 +299,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "createUser"]
 - !private ["So16NSObjectProtocolP", "database"]
 - !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
+- !private ["So16NSObjectProtocolP", "dismiss"]
 - !private ["So16NSObjectProtocolP", "dismissKeyboard"]
 - !private ["So16NSObjectProtocolP", "endEditing"]
 - !private ["So16NSObjectProtocolP", "hideKeyboardWhenTappedAround"]
@@ -321,6 +336,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "UIViewController"]
 - !private ["So21UIAppearanceContainerP", "addGestureRecognizer"]
 - !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
+- !private ["So21UIAppearanceContainerP", "dismiss"]
 - !private ["So21UIAppearanceContainerP", "dismissKeyboard"]
 - !private ["So21UIAppearanceContainerP", "endEditing"]
 - !private ["So21UIAppearanceContainerP", "hideKeyboardWhenTappedAround"]
@@ -339,6 +355,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "UITapGestureRecognizer"]
 - !private ["So18UIContentContainerP", "UIViewController"]
 - !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
+- !private ["So18UIContentContainerP", "dismiss"]
 - !private ["So18UIContentContainerP", "dismissKeyboard"]
 - !private ["So18UIContentContainerP", "hideKeyboardWhenTappedAround"]
 - !private ["So18UIContentContainerP", "init"]
@@ -364,6 +381,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "UIViewController"]
 - !private ["So18UIFocusEnvironmentP", "addGestureRecognizer"]
 - !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UIFocusEnvironmentP", "dismiss"]
 - !private ["So18UIFocusEnvironmentP", "dismissKeyboard"]
 - !private ["So18UIFocusEnvironmentP", "endEditing"]
 - !private ["So18UIFocusEnvironmentP", "hideKeyboardWhenTappedAround"]
@@ -390,6 +408,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "UIViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "addGestureRecognizer"]
 - !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
+- !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
 - !private ["So30UIPasteConfigurationSupportingP", "dismissKeyboard"]
 - !private ["So30UIPasteConfigurationSupportingP", "endEditing"]
 - !private ["So30UIPasteConfigurationSupportingP", "hideKeyboardWhenTappedAround"]
@@ -406,6 +425,7 @@ depends-member:
 - !private ["So11UIResponderC", "Auth"]
 - !private ["So11UIResponderC", "Database"]
 - ["So11UIResponderC", "DatabaseReference"]
+- ["So11UIResponderC", "UIBarButtonItem"]
 - ["So11UIResponderC", "UIButton"]
 - ["So11UIResponderC", "UILabel"]
 - !private ["So11UIResponderC", "UITapGestureRecognizer"]
@@ -414,13 +434,16 @@ depends-member:
 - !private ["So11UIResponderC", "User"]
 - !private ["So11UIResponderC", "addGestureRecognizer"]
 - ["So11UIResponderC", "buttonRegister"]
+- ["So11UIResponderC", "cancelBarButton"]
 - ["So11UIResponderC", "didReceiveMemoryWarning"]
+- !private ["So11UIResponderC", "dismiss"]
 - ["So11UIResponderC", "dismissKeyboard"]
 - !private ["So11UIResponderC", "endEditing"]
 - ["So11UIResponderC", "hideKeyboardWhenTappedAround"]
 - ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "labelMessage"]
 - !private ["So11UIResponderC", "performSegue"]
+- ["So11UIResponderC", "phoneNumberTextField"]
 - ["So11UIResponderC", "ref"]
 - !private ["So11UIResponderC", "text"]
 - ["So11UIResponderC", "textFieldEmail"]
@@ -433,6 +456,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "UIViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "addGestureRecognizer"]
 - !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
+- !private ["So30UIResponderStandardEditActionsP", "dismiss"]
 - !private ["So30UIResponderStandardEditActionsP", "dismissKeyboard"]
 - !private ["So30UIResponderStandardEditActionsP", "endEditing"]
 - !private ["So30UIResponderStandardEditActionsP", "hideKeyboardWhenTappedAround"]
@@ -451,6 +475,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "UITapGestureRecognizer"]
 - !private ["So16UIStateRestoringP", "UIViewController"]
 - !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
+- !private ["So16UIStateRestoringP", "dismiss"]
 - !private ["So16UIStateRestoringP", "dismissKeyboard"]
 - !private ["So16UIStateRestoringP", "hideKeyboardWhenTappedAround"]
 - !private ["So16UIStateRestoringP", "init"]
@@ -476,6 +501,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "UIViewController"]
 - !private ["So18UITraitEnvironmentP", "addGestureRecognizer"]
 - !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UITraitEnvironmentP", "dismiss"]
 - !private ["So18UITraitEnvironmentP", "dismissKeyboard"]
 - !private ["So18UITraitEnvironmentP", "endEditing"]
 - !private ["So18UITraitEnvironmentP", "hideKeyboardWhenTappedAround"]
@@ -495,6 +521,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "Auth"]
 - !private ["So16UIViewControllerC", "Database"]
 - ["So16UIViewControllerC", "DatabaseReference"]
+- ["So16UIViewControllerC", "UIBarButtonItem"]
 - ["So16UIViewControllerC", "UIButton"]
 - ["So16UIViewControllerC", "UILabel"]
 - !private ["So16UIViewControllerC", "UITapGestureRecognizer"]
@@ -502,12 +529,15 @@ depends-member:
 - !private ["So16UIViewControllerC", "UIViewController"]
 - !private ["So16UIViewControllerC", "User"]
 - ["So16UIViewControllerC", "buttonRegister"]
+- ["So16UIViewControllerC", "cancelBarButton"]
 - ["So16UIViewControllerC", "didReceiveMemoryWarning"]
+- !private ["So16UIViewControllerC", "dismiss"]
 - ["So16UIViewControllerC", "dismissKeyboard"]
 - ["So16UIViewControllerC", "hideKeyboardWhenTappedAround"]
 - ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "labelMessage"]
 - !private ["So16UIViewControllerC", "performSegue"]
+- ["So16UIViewControllerC", "phoneNumberTextField"]
 - ["So16UIViewControllerC", "ref"]
 - ["So16UIViewControllerC", "textFieldEmail"]
 - ["So16UIViewControllerC", "textFieldPassword"]
@@ -519,17 +549,21 @@ depends-member:
 - !private ["12Shop_Hosting14ViewControllerC", "Auth"]
 - !private ["12Shop_Hosting14ViewControllerC", "Database"]
 - ["12Shop_Hosting14ViewControllerC", "DatabaseReference"]
+- ["12Shop_Hosting14ViewControllerC", "UIBarButtonItem"]
 - ["12Shop_Hosting14ViewControllerC", "UIButton"]
 - ["12Shop_Hosting14ViewControllerC", "UILabel"]
 - ["12Shop_Hosting14ViewControllerC", "UITextField"]
 - !private ["12Shop_Hosting14ViewControllerC", "User"]
 - ["12Shop_Hosting14ViewControllerC", "buttonRegister"]
+- ["12Shop_Hosting14ViewControllerC", "cancelBarButton"]
 - ["12Shop_Hosting14ViewControllerC", "deinit"]
 - ["12Shop_Hosting14ViewControllerC", "didReceiveMemoryWarning"]
+- !private ["12Shop_Hosting14ViewControllerC", "dismiss"]
 - !private ["12Shop_Hosting14ViewControllerC", "hideKeyboardWhenTappedAround"]
 - ["12Shop_Hosting14ViewControllerC", "init"]
 - ["12Shop_Hosting14ViewControllerC", "labelMessage"]
 - !private ["12Shop_Hosting14ViewControllerC", "performSegue"]
+- ["12Shop_Hosting14ViewControllerC", "phoneNumberTextField"]
 - ["12Shop_Hosting14ViewControllerC", "ref"]
 - ["12Shop_Hosting14ViewControllerC", "textFieldEmail"]
 - ["12Shop_Hosting14ViewControllerC", "textFieldPassword"]
@@ -558,6 +592,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "createUser"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "database"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dismissKeyboard"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "endEditing"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "hideKeyboardWhenTappedAround"]
@@ -739,4 +774,15 @@ depends-external:
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Firebase/Core/Sources/module.modulemap"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
-interface-hash: "17acea9209f4b04bd06cc8e51c2d901e"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "4881382c9d52b2f1224160b1357fb578"

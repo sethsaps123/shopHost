@@ -8,6 +8,7 @@ provides-member:
 provides-dynamic-lookup:
 - "awakeFromNib"
 - "itemName"
+- "itemPrice"
 - "minusItem"
 - "numItem"
 - "plusItem"
@@ -15,6 +16,7 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "+="
 - !private "-="
+- !private ">"
 - "AssignmentPrecedence"
 - "Bool"
 - !private "StringLiteralType"
@@ -24,6 +26,7 @@ depends-top-level:
 - "storeItemTableViewCell"
 depends-member:
 - !private ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "awakeFromNib"]
 - !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "itemCount"]
@@ -47,8 +50,11 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "setSelected"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "awakeFromNib"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "itemCount"]
@@ -56,8 +62,11 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "setSelected"]
 - !private ["s23CustomStringConvertibleP", "text"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
 - !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "awakeFromNib"]
 - !private ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "itemCount"]
@@ -65,9 +74,11 @@ depends-member:
 - !private ["s9EquatableP", "setSelected"]
 - !private ["s9EquatableP", "text"]
 - ["s9EquatableP", ""]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
 - !private ["s8HashableP", "awakeFromNib"]
 - !private ["s8HashableP", "init"]
 - !private ["s8HashableP", "itemCount"]
@@ -75,6 +86,7 @@ depends-member:
 - !private ["s8HashableP", "setSelected"]
 - !private ["s8HashableP", "text"]
 - ["s8HashableP", ""]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["So8NSCodingP", "awakeFromNib"]
@@ -95,6 +107,7 @@ depends-member:
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "itemCount"]
 - ["So8NSObjectC", "itemName"]
+- ["So8NSObjectC", "itemPrice"]
 - ["So8NSObjectC", "minusItem"]
 - ["So8NSObjectC", "numItem"]
 - ["So8NSObjectC", "plusItem"]
@@ -186,6 +199,7 @@ depends-member:
 - ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "itemCount"]
 - ["So11UIResponderC", "itemName"]
+- ["So11UIResponderC", "itemPrice"]
 - ["So11UIResponderC", "minusItem"]
 - ["So11UIResponderC", "numItem"]
 - ["So11UIResponderC", "plusItem"]
@@ -205,6 +219,7 @@ depends-member:
 - ["So15UITableViewCellC", "init"]
 - ["So15UITableViewCellC", "itemCount"]
 - ["So15UITableViewCellC", "itemName"]
+- ["So15UITableViewCellC", "itemPrice"]
 - ["So15UITableViewCellC", "minusItem"]
 - ["So15UITableViewCellC", "numItem"]
 - ["So15UITableViewCellC", "plusItem"]
@@ -224,6 +239,7 @@ depends-member:
 - ["So6UIViewC", "init"]
 - ["So6UIViewC", "itemCount"]
 - ["So6UIViewC", "itemName"]
+- ["So6UIViewC", "itemPrice"]
 - ["So6UIViewC", "minusItem"]
 - ["So6UIViewC", "numItem"]
 - ["So6UIViewC", "plusItem"]
@@ -237,6 +253,7 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "setSelected"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
@@ -252,6 +269,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setSelected"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s26_RangeReplaceableIndexableP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
@@ -263,12 +281,14 @@ depends-member:
 - ["12Shop_Hosting22storeItemTableViewCellC", "init"]
 - ["12Shop_Hosting22storeItemTableViewCellC", "itemCount"]
 - ["12Shop_Hosting22storeItemTableViewCellC", "itemName"]
+- ["12Shop_Hosting22storeItemTableViewCellC", "itemPrice"]
 - ["12Shop_Hosting22storeItemTableViewCellC", "minusItem"]
 - ["12Shop_Hosting22storeItemTableViewCellC", "numItem"]
 - ["12Shop_Hosting22storeItemTableViewCellC", "plusItem"]
 - ["12Shop_Hosting22storeItemTableViewCellC", "setSelected"]
 depends-nominal:
 - !private "s23BidirectionalCollectionP"
+- !private "Sb"
 - "So15CALayerDelegateP"
 - "s7CVarArgP"
 - !private "s10CollectionP"
@@ -280,6 +300,7 @@ depends-nominal:
 - !private "s9DecodableP"
 - !private "s9EncodableP"
 - "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
@@ -319,6 +340,7 @@ depends-nominal:
 - "So6UIViewC"
 - !private "s23_BidirectionalIndexableP"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
@@ -334,20 +356,20 @@ depends-nominal:
 - "12Shop_Hosting22storeItemTableViewCellC"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FIRInstanceID.h"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FirebaseInstanceID.h"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRMutableData.h"
@@ -407,4 +429,15 @@ depends-external:
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Firebase/Core/Sources/module.modulemap"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
-interface-hash: "97d94bab11b84663d86fa3fe1ba89e6c"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include/Darwin.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "52025d18c69bcdff942b94f6dfd0500e"

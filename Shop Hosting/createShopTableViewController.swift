@@ -23,7 +23,7 @@ class createShopTableViewController: UITableViewController {
     
     func randomAlphaNumericString(length: Int) -> String {
         let allowedChars = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ123456789"
-        let allowedCharsCount = UInt32(allowedChars.characters.count)
+        let allowedCharsCount = UInt32(allowedChars.count)
         var randomString = ""
         
         for _ in 0..<length {
@@ -43,11 +43,10 @@ class createShopTableViewController: UITableViewController {
     var ref: DatabaseReference!
     
     @IBAction func createShop(_ sender: UIBarButtonItem) {
-        
+        let itemData = getCellsData()
         let referralCode = randomAlphaNumericString(length: 10)
         let values = ["shopOwner" : Auth.auth().currentUser!.uid,
                       "shopName" : shopName]
-        let itemData = getCellsData()
         
         let values2 = [shopName : true]
         self.ref.child("shops").child(referralCode).setValue(values)
@@ -62,7 +61,7 @@ class createShopTableViewController: UITableViewController {
                 self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserOwns").setValue(values2)
             }
         })
-        //self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopsUserOwns").setValue(values2)
+
         
         let alertController = UIAlertController(title: "Shop Added", message: "Here is your referral code: \(referralCode)", preferredStyle: .alert)
         

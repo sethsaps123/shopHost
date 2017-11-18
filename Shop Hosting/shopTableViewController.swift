@@ -50,6 +50,8 @@ class shopTableViewController: UITableViewController {
     
     var numColumns = 0
     
+    var segueToActualName : String!
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBAction func addShopSegue(_ sender: Any) {
@@ -75,12 +77,13 @@ class shopTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath) as? shopListTableViewCell
         
         // Configure the cell...
-        cell.textLabel?.text = items[indexPath.item].key
-
-        return cell
+        cell?.shopReferralCode = items[indexPath.item].key
+        cell?.shopName.text = (String)(describing: (items[indexPath.item].value)!)
+        
+        return cell!
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -90,6 +93,7 @@ class shopTableViewController: UITableViewController {
             if let navVC = segue.destination as? UINavigationController {
                 if let vc = navVC.viewControllers.first as? singleShopTableViewController {
                     vc.shopName = self.storeToSegueTo
+                    vc.shopActualName = self.segueToActualName
                 }
             }
         }
@@ -99,6 +103,7 @@ class shopTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         storeToSegueTo = items[indexPath.item].key
+        segueToActualName = (String)(describing: (items[indexPath.item].value)!)
         performSegue(withIdentifier: "toStoreCheckout", sender: nil)
     }
  

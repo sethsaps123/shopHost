@@ -21,13 +21,17 @@ class storeItemTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBOutlet weak var itemPrice: UILabel!
+    
     @IBOutlet weak var itemName: UILabel!
     
     @IBAction func plusItem(_ sender: UIButton) {
         itemCount += 1
     }
     @IBAction func minusItem(_ sender: UIButton) {
-        itemCount -= 1
+        if itemCount > 0{
+            itemCount -= 1
+        }
     }
     
     var itemCount = 0 {
