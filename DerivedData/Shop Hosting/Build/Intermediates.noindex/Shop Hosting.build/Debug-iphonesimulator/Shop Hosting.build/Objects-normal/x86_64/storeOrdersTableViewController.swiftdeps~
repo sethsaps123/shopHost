@@ -11,16 +11,18 @@ provides-dynamic-lookup:
 - "markDeliveredBarButton"
 - "numberOfSections"
 - "tableView"
-- "toolbar"
 - "viewDidAppear"
 - "viewDidLoad"
 depends-top-level:
+- !private "!="
+- !private "+"
+- !private "-"
 - !private "=="
 - "AssignmentPrecedence"
 - !private "Auth"
 - "Bool"
 - !private "BooleanLiteralType"
-- !private "CastingPrecedence"
+- "CastingPrecedence"
 - "DataSnapshot"
 - !private "Database"
 - "DatabaseReference"
@@ -28,12 +30,13 @@ depends-top-level:
 - "IndexPath"
 - "Int"
 - "String"
-- !private "StringLiteralType"
+- "StringLiteralType"
 - "UIBarButtonItem"
-- !private "UIColor"
 - "UITableView"
 - "UITableViewCell"
 - "UITableViewController"
+- "UnicodeScalarType"
+- !private "deliveryDescriptionTableViewCell"
 - "storeOrdersTableViewController"
 depends-member:
 - !private ["Sa", "append"]
@@ -51,9 +54,10 @@ depends-member:
 - !private ["s23BidirectionalCollectionP", "value"]
 - !private ["s13BinaryIntegerP", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
-- !private ["So15CALayerDelegateP", "backgroundColor"]
+- !private ["So15CALayerDelegateP", "addressLabel"]
 - !private ["So15CALayerDelegateP", "dequeueReusableCell"]
 - !private ["So15CALayerDelegateP", "detailTextLabel"]
+- !private ["So15CALayerDelegateP", "phoneLabel"]
 - !private ["So15CALayerDelegateP", "reloadData"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["So15CALayerDelegateP", "textLabel"]
@@ -62,10 +66,10 @@ depends-member:
 - !private ["s7CVarArgP", "Database"]
 - !private ["s7CVarArgP", "Int"]
 - !private ["s7CVarArgP", "String"]
-- !private ["s7CVarArgP", "UIColor"]
+- !private ["s7CVarArgP", "addressData"]
+- !private ["s7CVarArgP", "addressLabel"]
 - !private ["s7CVarArgP", "append"]
 - !private ["s7CVarArgP", "auth"]
-- !private ["s7CVarArgP", "backgroundColor"]
 - !private ["s7CVarArgP", "child"]
 - !private ["s7CVarArgP", "children"]
 - !private ["s7CVarArgP", "childrenCount"]
@@ -75,13 +79,15 @@ depends-member:
 - !private ["s7CVarArgP", "detailTextLabel"]
 - !private ["s7CVarArgP", "didReceiveMemoryWarning"]
 - !private ["s7CVarArgP", "dismiss"]
-- !private ["s7CVarArgP", "green"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "key"]
 - !private ["s7CVarArgP", "numRows"]
 - !private ["s7CVarArgP", "observeSingleEvent"]
+- !private ["s7CVarArgP", "orderAddress"]
 - !private ["s7CVarArgP", "orderItems"]
 - !private ["s7CVarArgP", "orderName"]
+- !private ["s7CVarArgP", "phoneLabel"]
+- !private ["s7CVarArgP", "phoneNumber"]
 - !private ["s7CVarArgP", "ref"]
 - !private ["s7CVarArgP", "reference"]
 - !private ["s7CVarArgP", "reloadData"]
@@ -90,7 +96,6 @@ depends-member:
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "textLabel"]
 - !private ["s7CVarArgP", "title"]
-- !private ["s7CVarArgP", "toolbar"]
 - !private ["s7CVarArgP", "uid"]
 - !private ["s7CVarArgP", "updateChildValues"]
 - !private ["s7CVarArgP", "value"]
@@ -103,17 +108,17 @@ depends-member:
 - !private ["s10CollectionP", "key"]
 - !private ["s10CollectionP", "subscript"]
 - !private ["s10CollectionP", "value"]
-- !private ["s10ComparableP", "init"]
+- ["s10ComparableP", "init"]
 - !private ["s10ComparableP", "item"]
 - !private ["s28CustomDebugStringConvertibleP", "Auth"]
 - ["s28CustomDebugStringConvertibleP", "DataSnapshot"]
 - !private ["s28CustomDebugStringConvertibleP", "Database"]
 - !private ["s28CustomDebugStringConvertibleP", "Int"]
 - !private ["s28CustomDebugStringConvertibleP", "String"]
-- !private ["s28CustomDebugStringConvertibleP", "UIColor"]
+- !private ["s28CustomDebugStringConvertibleP", "addressData"]
+- !private ["s28CustomDebugStringConvertibleP", "addressLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
 - !private ["s28CustomDebugStringConvertibleP", "auth"]
-- !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
 - !private ["s28CustomDebugStringConvertibleP", "child"]
 - !private ["s28CustomDebugStringConvertibleP", "children"]
 - !private ["s28CustomDebugStringConvertibleP", "childrenCount"]
@@ -123,14 +128,16 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "detailTextLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
 - !private ["s28CustomDebugStringConvertibleP", "dismiss"]
-- !private ["s28CustomDebugStringConvertibleP", "green"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "item"]
 - !private ["s28CustomDebugStringConvertibleP", "key"]
 - !private ["s28CustomDebugStringConvertibleP", "numRows"]
 - !private ["s28CustomDebugStringConvertibleP", "observeSingleEvent"]
+- !private ["s28CustomDebugStringConvertibleP", "orderAddress"]
 - !private ["s28CustomDebugStringConvertibleP", "orderItems"]
 - !private ["s28CustomDebugStringConvertibleP", "orderName"]
+- !private ["s28CustomDebugStringConvertibleP", "phoneLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "phoneNumber"]
 - !private ["s28CustomDebugStringConvertibleP", "ref"]
 - !private ["s28CustomDebugStringConvertibleP", "reference"]
 - !private ["s28CustomDebugStringConvertibleP", "reloadData"]
@@ -139,7 +146,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "textLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "title"]
-- !private ["s28CustomDebugStringConvertibleP", "toolbar"]
 - !private ["s28CustomDebugStringConvertibleP", "uid"]
 - !private ["s28CustomDebugStringConvertibleP", "updateChildValues"]
 - !private ["s28CustomDebugStringConvertibleP", "value"]
@@ -147,7 +153,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "append"]
 - ["s17CustomReflectableP", "init"]
@@ -160,11 +166,11 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "Database"]
 - !private ["s23CustomStringConvertibleP", "Int"]
 - !private ["s23CustomStringConvertibleP", "String"]
-- !private ["s23CustomStringConvertibleP", "UIColor"]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "addressData"]
+- !private ["s23CustomStringConvertibleP", "addressLabel"]
 - !private ["s23CustomStringConvertibleP", "append"]
 - !private ["s23CustomStringConvertibleP", "auth"]
-- !private ["s23CustomStringConvertibleP", "backgroundColor"]
 - !private ["s23CustomStringConvertibleP", "child"]
 - !private ["s23CustomStringConvertibleP", "children"]
 - !private ["s23CustomStringConvertibleP", "childrenCount"]
@@ -174,14 +180,16 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "detailTextLabel"]
 - !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
 - !private ["s23CustomStringConvertibleP", "dismiss"]
-- !private ["s23CustomStringConvertibleP", "green"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "item"]
 - !private ["s23CustomStringConvertibleP", "key"]
 - !private ["s23CustomStringConvertibleP", "numRows"]
 - !private ["s23CustomStringConvertibleP", "observeSingleEvent"]
+- !private ["s23CustomStringConvertibleP", "orderAddress"]
 - !private ["s23CustomStringConvertibleP", "orderItems"]
 - !private ["s23CustomStringConvertibleP", "orderName"]
+- !private ["s23CustomStringConvertibleP", "phoneLabel"]
+- !private ["s23CustomStringConvertibleP", "phoneNumber"]
 - !private ["s23CustomStringConvertibleP", "ref"]
 - !private ["s23CustomStringConvertibleP", "reference"]
 - !private ["s23CustomStringConvertibleP", "reloadData"]
@@ -190,7 +198,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "textLabel"]
 - !private ["s23CustomStringConvertibleP", "title"]
-- !private ["s23CustomStringConvertibleP", "toolbar"]
 - !private ["s23CustomStringConvertibleP", "uid"]
 - !private ["s23CustomStringConvertibleP", "updateChildValues"]
 - !private ["s23CustomStringConvertibleP", "value"]
@@ -225,10 +232,10 @@ depends-member:
 - !private ["s9EquatableP", "Database"]
 - !private ["s9EquatableP", "Int"]
 - !private ["s9EquatableP", "String"]
-- !private ["s9EquatableP", "UIColor"]
 - !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "addressData"]
+- !private ["s9EquatableP", "addressLabel"]
 - !private ["s9EquatableP", "auth"]
-- !private ["s9EquatableP", "backgroundColor"]
 - !private ["s9EquatableP", "child"]
 - !private ["s9EquatableP", "children"]
 - !private ["s9EquatableP", "childrenCount"]
@@ -238,14 +245,16 @@ depends-member:
 - !private ["s9EquatableP", "detailTextLabel"]
 - !private ["s9EquatableP", "didReceiveMemoryWarning"]
 - !private ["s9EquatableP", "dismiss"]
-- !private ["s9EquatableP", "green"]
-- !private ["s9EquatableP", "init"]
+- ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "item"]
 - !private ["s9EquatableP", "key"]
 - !private ["s9EquatableP", "numRows"]
 - !private ["s9EquatableP", "observeSingleEvent"]
+- !private ["s9EquatableP", "orderAddress"]
 - !private ["s9EquatableP", "orderItems"]
 - !private ["s9EquatableP", "orderName"]
+- !private ["s9EquatableP", "phoneLabel"]
+- !private ["s9EquatableP", "phoneNumber"]
 - !private ["s9EquatableP", "ref"]
 - !private ["s9EquatableP", "reference"]
 - !private ["s9EquatableP", "reloadData"]
@@ -253,7 +262,6 @@ depends-member:
 - !private ["s9EquatableP", "text"]
 - !private ["s9EquatableP", "textLabel"]
 - !private ["s9EquatableP", "title"]
-- !private ["s9EquatableP", "toolbar"]
 - !private ["s9EquatableP", "uid"]
 - !private ["s9EquatableP", "updateChildValues"]
 - !private ["s9EquatableP", "value"]
@@ -267,20 +275,20 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s25ExpressibleByArrayLiteralP", "value"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
-- !private ["s26ExpressibleByStringLiteralP", "init"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s17FixedWidthIntegerP", "init"]
 - !private ["s8HashableP", "Auth"]
 - ["s8HashableP", "DataSnapshot"]
 - !private ["s8HashableP", "Database"]
 - !private ["s8HashableP", "Int"]
 - !private ["s8HashableP", "String"]
-- !private ["s8HashableP", "UIColor"]
 - !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "addressData"]
+- !private ["s8HashableP", "addressLabel"]
 - !private ["s8HashableP", "auth"]
-- !private ["s8HashableP", "backgroundColor"]
 - !private ["s8HashableP", "child"]
 - !private ["s8HashableP", "children"]
 - !private ["s8HashableP", "childrenCount"]
@@ -290,14 +298,16 @@ depends-member:
 - !private ["s8HashableP", "detailTextLabel"]
 - !private ["s8HashableP", "didReceiveMemoryWarning"]
 - !private ["s8HashableP", "dismiss"]
-- !private ["s8HashableP", "green"]
-- !private ["s8HashableP", "init"]
+- ["s8HashableP", "init"]
 - !private ["s8HashableP", "item"]
 - !private ["s8HashableP", "key"]
 - !private ["s8HashableP", "numRows"]
 - !private ["s8HashableP", "observeSingleEvent"]
+- !private ["s8HashableP", "orderAddress"]
 - !private ["s8HashableP", "orderItems"]
 - !private ["s8HashableP", "orderName"]
+- !private ["s8HashableP", "phoneLabel"]
+- !private ["s8HashableP", "phoneNumber"]
 - !private ["s8HashableP", "ref"]
 - !private ["s8HashableP", "reference"]
 - !private ["s8HashableP", "reloadData"]
@@ -305,7 +315,6 @@ depends-member:
 - !private ["s8HashableP", "text"]
 - !private ["s8HashableP", "textLabel"]
 - !private ["s8HashableP", "title"]
-- !private ["s8HashableP", "toolbar"]
 - !private ["s8HashableP", "uid"]
 - !private ["s8HashableP", "updateChildValues"]
 - !private ["s8HashableP", "value"]
@@ -315,66 +324,71 @@ depends-member:
 - !private ["10Foundation9IndexPathV", "item"]
 - !private ["Si", "init"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
-- !private ["s25LosslessStringConvertibleP", "init"]
-- !private ["s10MirrorPathP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["s25MutableBidirectionalSliceV", "key"]
+- !private ["s25MutableBidirectionalSliceV", "value"]
 - !private ["s17MutableCollectionP", "append"]
 - ["s17MutableCollectionP", "init"]
 - !private ["s17MutableCollectionP", "item"]
 - !private ["s17MutableCollectionP", "key"]
 - !private ["s17MutableCollectionP", "subscript"]
 - !private ["s17MutableCollectionP", "value"]
+- !private ["s24MutableRandomAccessSliceV", "key"]
+- !private ["s24MutableRandomAccessSliceV", "value"]
+- !private ["s12MutableSliceV", "key"]
+- !private ["s12MutableSliceV", "value"]
 - !private ["So8NSCodingP", "Auth"]
 - ["So8NSCodingP", "DataSnapshot"]
 - !private ["So8NSCodingP", "Database"]
 - !private ["So8NSCodingP", "Int"]
 - !private ["So8NSCodingP", "String"]
-- !private ["So8NSCodingP", "UIColor"]
-- !private ["So8NSCodingP", "backgroundColor"]
+- !private ["So8NSCodingP", "addressData"]
+- !private ["So8NSCodingP", "addressLabel"]
 - !private ["So8NSCodingP", "dequeueReusableCell"]
 - !private ["So8NSCodingP", "detailTextLabel"]
 - !private ["So8NSCodingP", "didReceiveMemoryWarning"]
 - !private ["So8NSCodingP", "dismiss"]
-- !private ["So8NSCodingP", "green"]
-- !private ["So8NSCodingP", "init"]
+- ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "numRows"]
+- !private ["So8NSCodingP", "orderAddress"]
 - !private ["So8NSCodingP", "orderItems"]
 - !private ["So8NSCodingP", "orderName"]
+- !private ["So8NSCodingP", "phoneLabel"]
+- !private ["So8NSCodingP", "phoneNumber"]
 - !private ["So8NSCodingP", "ref"]
 - !private ["So8NSCodingP", "reloadData"]
 - !private ["So8NSCodingP", "tableView"]
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "textLabel"]
 - !private ["So8NSCodingP", "title"]
-- !private ["So8NSCodingP", "toolbar"]
 - !private ["So8NSCodingP", "viewDidAppear"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - ["So8NSCodingP", ""]
-- !private ["So9NSCopyingP", "green"]
-- !private ["So9NSCopyingP", "init"]
+- ["So9NSCopyingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "Auth"]
 - ["So26NSExtensionRequestHandlingP", "DataSnapshot"]
 - !private ["So26NSExtensionRequestHandlingP", "Database"]
 - !private ["So26NSExtensionRequestHandlingP", "Int"]
 - !private ["So26NSExtensionRequestHandlingP", "String"]
-- !private ["So26NSExtensionRequestHandlingP", "UIColor"]
+- !private ["So26NSExtensionRequestHandlingP", "addressData"]
 - !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
 - !private ["So26NSExtensionRequestHandlingP", "dismiss"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "numRows"]
+- !private ["So26NSExtensionRequestHandlingP", "orderAddress"]
 - !private ["So26NSExtensionRequestHandlingP", "orderItems"]
 - !private ["So26NSExtensionRequestHandlingP", "orderName"]
+- !private ["So26NSExtensionRequestHandlingP", "phoneNumber"]
 - !private ["So26NSExtensionRequestHandlingP", "ref"]
 - !private ["So26NSExtensionRequestHandlingP", "tableView"]
 - !private ["So26NSExtensionRequestHandlingP", "title"]
-- !private ["So26NSExtensionRequestHandlingP", "toolbar"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidAppear"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - ["So26NSExtensionRequestHandlingP", ""]
-- !private ["So21NSItemProviderReadingP", "green"]
-- !private ["So21NSItemProviderReadingP", "init"]
-- !private ["So21NSItemProviderWritingP", "green"]
-- !private ["So21NSItemProviderWritingP", "init"]
-- !private ["So16NSMutableCopyingP", "init"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "init"]
+- ["So16NSMutableCopyingP", "init"]
 - !private ["So8NSObjectC", "Auth"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "DataSnapshot"]
@@ -384,30 +398,33 @@ depends-member:
 - ["So8NSObjectC", "Int"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UIBarButtonItem"]
-- !private ["So8NSObjectC", "UIColor"]
 - ["So8NSObjectC", "UITableView"]
 - ["So8NSObjectC", "UITableViewCell"]
+- ["So8NSObjectC", "addressData"]
+- !private ["So8NSObjectC", "addressLabel"]
 - !private ["So8NSObjectC", "auth"]
 - ["So8NSObjectC", "backButton"]
-- !private ["So8NSObjectC", "backgroundColor"]
 - !private ["So8NSObjectC", "child"]
 - !private ["So8NSObjectC", "children"]
 - !private ["So8NSObjectC", "childrenCount"]
 - !private ["So8NSObjectC", "currentUser"]
 - !private ["So8NSObjectC", "database"]
+- !private ["So8NSObjectC", "deliveryDescriptionTableViewCell"]
 - !private ["So8NSObjectC", "dequeueReusableCell"]
 - !private ["So8NSObjectC", "detailTextLabel"]
 - ["So8NSObjectC", "didReceiveMemoryWarning"]
 - !private ["So8NSObjectC", "dismiss"]
-- !private ["So8NSObjectC", "green"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "key"]
 - ["So8NSObjectC", "markDeliveredBarButton"]
 - ["So8NSObjectC", "numRows"]
 - ["So8NSObjectC", "numberOfSections"]
 - !private ["So8NSObjectC", "observeSingleEvent"]
+- ["So8NSObjectC", "orderAddress"]
 - ["So8NSObjectC", "orderItems"]
 - ["So8NSObjectC", "orderName"]
+- !private ["So8NSObjectC", "phoneLabel"]
+- ["So8NSObjectC", "phoneNumber"]
 - ["So8NSObjectC", "ref"]
 - !private ["So8NSObjectC", "reference"]
 - !private ["So8NSObjectC", "reloadData"]
@@ -415,7 +432,6 @@ depends-member:
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "textLabel"]
 - !private ["So8NSObjectC", "title"]
-- ["So8NSObjectC", "toolbar"]
 - !private ["So8NSObjectC", "uid"]
 - !private ["So8NSObjectC", "updateChildValues"]
 - !private ["So8NSObjectC", "value"]
@@ -426,9 +442,9 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "Database"]
 - !private ["So16NSObjectProtocolP", "Int"]
 - !private ["So16NSObjectProtocolP", "String"]
-- !private ["So16NSObjectProtocolP", "UIColor"]
+- !private ["So16NSObjectProtocolP", "addressData"]
+- !private ["So16NSObjectProtocolP", "addressLabel"]
 - !private ["So16NSObjectProtocolP", "auth"]
-- !private ["So16NSObjectProtocolP", "backgroundColor"]
 - !private ["So16NSObjectProtocolP", "child"]
 - !private ["So16NSObjectProtocolP", "children"]
 - !private ["So16NSObjectProtocolP", "childrenCount"]
@@ -438,13 +454,15 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "detailTextLabel"]
 - !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
 - !private ["So16NSObjectProtocolP", "dismiss"]
-- !private ["So16NSObjectProtocolP", "green"]
-- !private ["So16NSObjectProtocolP", "init"]
+- ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "key"]
 - !private ["So16NSObjectProtocolP", "numRows"]
 - !private ["So16NSObjectProtocolP", "observeSingleEvent"]
+- !private ["So16NSObjectProtocolP", "orderAddress"]
 - !private ["So16NSObjectProtocolP", "orderItems"]
 - !private ["So16NSObjectProtocolP", "orderName"]
+- !private ["So16NSObjectProtocolP", "phoneLabel"]
+- !private ["So16NSObjectProtocolP", "phoneNumber"]
 - !private ["So16NSObjectProtocolP", "ref"]
 - !private ["So16NSObjectProtocolP", "reference"]
 - !private ["So16NSObjectProtocolP", "reloadData"]
@@ -452,16 +470,14 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "text"]
 - !private ["So16NSObjectProtocolP", "textLabel"]
 - !private ["So16NSObjectProtocolP", "title"]
-- !private ["So16NSObjectProtocolP", "toolbar"]
 - !private ["So16NSObjectProtocolP", "uid"]
 - !private ["So16NSObjectProtocolP", "updateChildValues"]
 - !private ["So16NSObjectProtocolP", "value"]
 - !private ["So16NSObjectProtocolP", "viewDidAppear"]
 - !private ["So16NSObjectProtocolP", "viewDidLoad"]
 - ["So16NSObjectProtocolP", ""]
-- !private ["So14NSSecureCodingP", "green"]
-- !private ["So14NSSecureCodingP", "init"]
-- !private ["So8NSStringC", "init"]
+- ["So14NSSecureCodingP", "init"]
+- ["So8NSStringC", "init"]
 - !private ["s7NumericP", "init"]
 - !private ["s22RandomAccessCollectionP", "append"]
 - ["s22RandomAccessCollectionP", "init"]
@@ -474,6 +490,8 @@ depends-member:
 - !private ["s26RangeReplaceableCollectionP", "key"]
 - !private ["s26RangeReplaceableCollectionP", "subscript"]
 - !private ["s26RangeReplaceableCollectionP", "value"]
+- !private ["s21RangeReplaceableSliceV", "key"]
+- !private ["s21RangeReplaceableSliceV", "value"]
 - !private ["s16RawRepresentableP", "value"]
 - !private ["10Foundation20ReferenceConvertibleP", "item"]
 - !private ["s8SequenceP", "append"]
@@ -485,20 +503,22 @@ depends-member:
 - !private ["s13SignedIntegerP", "init"]
 - !private ["s13SignedNumericP", "init"]
 - !private ["s10StrideableP", "init"]
-- !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
-- !private ["s16TextOutputStreamP", "init"]
-- !private ["s20TextOutputStreamableP", "init"]
-- !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "addressLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "dequeueReusableCell"]
 - !private ["So29UIAccessibilityIdentificationP", "detailTextLabel"]
+- !private ["So29UIAccessibilityIdentificationP", "phoneLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "reloadData"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So29UIAccessibilityIdentificationP", "textLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "title"]
-- !private ["So12UIAppearanceP", "backgroundColor"]
+- !private ["So12UIAppearanceP", "addressLabel"]
 - !private ["So12UIAppearanceP", "dequeueReusableCell"]
 - !private ["So12UIAppearanceP", "detailTextLabel"]
+- !private ["So12UIAppearanceP", "phoneLabel"]
 - !private ["So12UIAppearanceP", "reloadData"]
 - !private ["So12UIAppearanceP", "text"]
 - !private ["So12UIAppearanceP", "textLabel"]
@@ -508,61 +528,64 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "Database"]
 - !private ["So21UIAppearanceContainerP", "Int"]
 - !private ["So21UIAppearanceContainerP", "String"]
-- !private ["So21UIAppearanceContainerP", "UIColor"]
-- !private ["So21UIAppearanceContainerP", "backgroundColor"]
+- !private ["So21UIAppearanceContainerP", "addressData"]
+- !private ["So21UIAppearanceContainerP", "addressLabel"]
 - !private ["So21UIAppearanceContainerP", "dequeueReusableCell"]
 - !private ["So21UIAppearanceContainerP", "detailTextLabel"]
 - !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
 - !private ["So21UIAppearanceContainerP", "dismiss"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "numRows"]
+- !private ["So21UIAppearanceContainerP", "orderAddress"]
 - !private ["So21UIAppearanceContainerP", "orderItems"]
 - !private ["So21UIAppearanceContainerP", "orderName"]
+- !private ["So21UIAppearanceContainerP", "phoneLabel"]
+- !private ["So21UIAppearanceContainerP", "phoneNumber"]
 - !private ["So21UIAppearanceContainerP", "ref"]
 - !private ["So21UIAppearanceContainerP", "reloadData"]
 - !private ["So21UIAppearanceContainerP", "tableView"]
 - !private ["So21UIAppearanceContainerP", "text"]
 - !private ["So21UIAppearanceContainerP", "textLabel"]
 - !private ["So21UIAppearanceContainerP", "title"]
-- !private ["So21UIAppearanceContainerP", "toolbar"]
 - !private ["So21UIAppearanceContainerP", "viewDidAppear"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So15UIBarButtonItemC", "title"]
 - !private ["So9UIBarItemC", "title"]
-- !private ["So7UIColorC", "green"]
 - !private ["So18UIContentContainerP", "Auth"]
 - ["So18UIContentContainerP", "DataSnapshot"]
 - !private ["So18UIContentContainerP", "Database"]
 - !private ["So18UIContentContainerP", "Int"]
 - !private ["So18UIContentContainerP", "String"]
-- !private ["So18UIContentContainerP", "UIColor"]
+- !private ["So18UIContentContainerP", "addressData"]
 - !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
 - !private ["So18UIContentContainerP", "dismiss"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "numRows"]
+- !private ["So18UIContentContainerP", "orderAddress"]
 - !private ["So18UIContentContainerP", "orderItems"]
 - !private ["So18UIContentContainerP", "orderName"]
+- !private ["So18UIContentContainerP", "phoneNumber"]
 - !private ["So18UIContentContainerP", "ref"]
 - !private ["So18UIContentContainerP", "tableView"]
 - !private ["So18UIContentContainerP", "title"]
-- !private ["So18UIContentContainerP", "toolbar"]
 - !private ["So18UIContentContainerP", "viewDidAppear"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - ["So18UIContentContainerP", ""]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
-- !private ["So17UICoordinateSpaceP", "backgroundColor"]
+- !private ["So17UICoordinateSpaceP", "addressLabel"]
 - !private ["So17UICoordinateSpaceP", "dequeueReusableCell"]
 - !private ["So17UICoordinateSpaceP", "detailTextLabel"]
+- !private ["So17UICoordinateSpaceP", "phoneLabel"]
 - !private ["So17UICoordinateSpaceP", "reloadData"]
 - !private ["So17UICoordinateSpaceP", "text"]
 - !private ["So17UICoordinateSpaceP", "textLabel"]
-- !private ["So23UIDataSourceTranslatingP", "backgroundColor"]
 - !private ["So23UIDataSourceTranslatingP", "dequeueReusableCell"]
 - !private ["So23UIDataSourceTranslatingP", "reloadData"]
-- !private ["So13UIDynamicItemP", "backgroundColor"]
+- !private ["So13UIDynamicItemP", "addressLabel"]
 - !private ["So13UIDynamicItemP", "dequeueReusableCell"]
 - !private ["So13UIDynamicItemP", "detailTextLabel"]
+- !private ["So13UIDynamicItemP", "phoneLabel"]
 - !private ["So13UIDynamicItemP", "reloadData"]
 - !private ["So13UIDynamicItemP", "text"]
 - !private ["So13UIDynamicItemP", "textLabel"]
@@ -571,33 +594,38 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "Database"]
 - !private ["So18UIFocusEnvironmentP", "Int"]
 - !private ["So18UIFocusEnvironmentP", "String"]
-- !private ["So18UIFocusEnvironmentP", "UIColor"]
-- !private ["So18UIFocusEnvironmentP", "backgroundColor"]
+- !private ["So18UIFocusEnvironmentP", "addressData"]
+- !private ["So18UIFocusEnvironmentP", "addressLabel"]
 - !private ["So18UIFocusEnvironmentP", "dequeueReusableCell"]
 - !private ["So18UIFocusEnvironmentP", "detailTextLabel"]
 - !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UIFocusEnvironmentP", "dismiss"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "numRows"]
+- !private ["So18UIFocusEnvironmentP", "orderAddress"]
 - !private ["So18UIFocusEnvironmentP", "orderItems"]
 - !private ["So18UIFocusEnvironmentP", "orderName"]
+- !private ["So18UIFocusEnvironmentP", "phoneLabel"]
+- !private ["So18UIFocusEnvironmentP", "phoneNumber"]
 - !private ["So18UIFocusEnvironmentP", "ref"]
 - !private ["So18UIFocusEnvironmentP", "reloadData"]
 - !private ["So18UIFocusEnvironmentP", "tableView"]
 - !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "textLabel"]
 - !private ["So18UIFocusEnvironmentP", "title"]
-- !private ["So18UIFocusEnvironmentP", "toolbar"]
 - !private ["So18UIFocusEnvironmentP", "viewDidAppear"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - ["So18UIFocusEnvironmentP", ""]
-- !private ["So11UIFocusItemP", "backgroundColor"]
+- !private ["So11UIFocusItemP", "addressLabel"]
 - !private ["So11UIFocusItemP", "dequeueReusableCell"]
 - !private ["So11UIFocusItemP", "detailTextLabel"]
+- !private ["So11UIFocusItemP", "phoneLabel"]
 - !private ["So11UIFocusItemP", "reloadData"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So11UIFocusItemP", "textLabel"]
+- !private ["So27UIGestureRecognizerDelegateP", "addressLabel"]
 - !private ["So27UIGestureRecognizerDelegateP", "detailTextLabel"]
+- !private ["So27UIGestureRecognizerDelegateP", "phoneLabel"]
 - !private ["So27UIGestureRecognizerDelegateP", "textLabel"]
 - !private ["So7UILabelC", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "Auth"]
@@ -605,23 +633,25 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "Database"]
 - !private ["So30UIPasteConfigurationSupportingP", "Int"]
 - !private ["So30UIPasteConfigurationSupportingP", "String"]
-- !private ["So30UIPasteConfigurationSupportingP", "UIColor"]
-- !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
+- !private ["So30UIPasteConfigurationSupportingP", "addressData"]
+- !private ["So30UIPasteConfigurationSupportingP", "addressLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "dequeueReusableCell"]
 - !private ["So30UIPasteConfigurationSupportingP", "detailTextLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
 - !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "numRows"]
+- !private ["So30UIPasteConfigurationSupportingP", "orderAddress"]
 - !private ["So30UIPasteConfigurationSupportingP", "orderItems"]
 - !private ["So30UIPasteConfigurationSupportingP", "orderName"]
+- !private ["So30UIPasteConfigurationSupportingP", "phoneLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "phoneNumber"]
 - !private ["So30UIPasteConfigurationSupportingP", "ref"]
 - !private ["So30UIPasteConfigurationSupportingP", "reloadData"]
 - !private ["So30UIPasteConfigurationSupportingP", "tableView"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "textLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "title"]
-- !private ["So30UIPasteConfigurationSupportingP", "toolbar"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidAppear"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -634,11 +664,12 @@ depends-member:
 - ["So11UIResponderC", "Int"]
 - ["So11UIResponderC", "String"]
 - ["So11UIResponderC", "UIBarButtonItem"]
-- !private ["So11UIResponderC", "UIColor"]
 - ["So11UIResponderC", "UITableView"]
 - ["So11UIResponderC", "UITableViewCell"]
+- ["So11UIResponderC", "addressData"]
+- !private ["So11UIResponderC", "addressLabel"]
 - ["So11UIResponderC", "backButton"]
-- !private ["So11UIResponderC", "backgroundColor"]
+- !private ["So11UIResponderC", "deliveryDescriptionTableViewCell"]
 - !private ["So11UIResponderC", "dequeueReusableCell"]
 - !private ["So11UIResponderC", "detailTextLabel"]
 - ["So11UIResponderC", "didReceiveMemoryWarning"]
@@ -647,15 +678,17 @@ depends-member:
 - ["So11UIResponderC", "markDeliveredBarButton"]
 - ["So11UIResponderC", "numRows"]
 - ["So11UIResponderC", "numberOfSections"]
+- ["So11UIResponderC", "orderAddress"]
 - ["So11UIResponderC", "orderItems"]
 - ["So11UIResponderC", "orderName"]
+- !private ["So11UIResponderC", "phoneLabel"]
+- ["So11UIResponderC", "phoneNumber"]
 - ["So11UIResponderC", "ref"]
 - !private ["So11UIResponderC", "reloadData"]
 - ["So11UIResponderC", "tableView"]
 - !private ["So11UIResponderC", "text"]
 - !private ["So11UIResponderC", "textLabel"]
 - !private ["So11UIResponderC", "title"]
-- ["So11UIResponderC", "toolbar"]
 - ["So11UIResponderC", "viewDidAppear"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "Auth"]
@@ -663,27 +696,28 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "Database"]
 - !private ["So30UIResponderStandardEditActionsP", "Int"]
 - !private ["So30UIResponderStandardEditActionsP", "String"]
-- !private ["So30UIResponderStandardEditActionsP", "UIColor"]
-- !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
+- !private ["So30UIResponderStandardEditActionsP", "addressData"]
+- !private ["So30UIResponderStandardEditActionsP", "addressLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "dequeueReusableCell"]
 - !private ["So30UIResponderStandardEditActionsP", "detailTextLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
 - !private ["So30UIResponderStandardEditActionsP", "dismiss"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "numRows"]
+- !private ["So30UIResponderStandardEditActionsP", "orderAddress"]
 - !private ["So30UIResponderStandardEditActionsP", "orderItems"]
 - !private ["So30UIResponderStandardEditActionsP", "orderName"]
+- !private ["So30UIResponderStandardEditActionsP", "phoneLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "phoneNumber"]
 - !private ["So30UIResponderStandardEditActionsP", "ref"]
 - !private ["So30UIResponderStandardEditActionsP", "reloadData"]
 - !private ["So30UIResponderStandardEditActionsP", "tableView"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "textLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "title"]
-- !private ["So30UIResponderStandardEditActionsP", "toolbar"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidAppear"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - ["So30UIResponderStandardEditActionsP", ""]
-- !private ["So12UIScrollViewC", "backgroundColor"]
 - !private ["So12UIScrollViewC", "dequeueReusableCell"]
 - !private ["So12UIScrollViewC", "reloadData"]
 - !private ["So20UIScrollViewDelegateP", "Auth"]
@@ -691,21 +725,21 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "Database"]
 - !private ["So20UIScrollViewDelegateP", "Int"]
 - !private ["So20UIScrollViewDelegateP", "String"]
-- !private ["So20UIScrollViewDelegateP", "UIColor"]
+- !private ["So20UIScrollViewDelegateP", "addressData"]
 - !private ["So20UIScrollViewDelegateP", "didReceiveMemoryWarning"]
 - !private ["So20UIScrollViewDelegateP", "dismiss"]
 - !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "numRows"]
+- !private ["So20UIScrollViewDelegateP", "orderAddress"]
 - !private ["So20UIScrollViewDelegateP", "orderItems"]
 - !private ["So20UIScrollViewDelegateP", "orderName"]
+- !private ["So20UIScrollViewDelegateP", "phoneNumber"]
 - !private ["So20UIScrollViewDelegateP", "ref"]
 - !private ["So20UIScrollViewDelegateP", "tableView"]
 - !private ["So20UIScrollViewDelegateP", "title"]
-- !private ["So20UIScrollViewDelegateP", "toolbar"]
 - !private ["So20UIScrollViewDelegateP", "viewDidAppear"]
 - !private ["So20UIScrollViewDelegateP", "viewDidLoad"]
 - ["So20UIScrollViewDelegateP", ""]
-- !private ["So35UISpringLoadedInteractionSupportingP", "backgroundColor"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "dequeueReusableCell"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "reloadData"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "title"]
@@ -714,24 +748,26 @@ depends-member:
 - !private ["So16UIStateRestoringP", "Database"]
 - !private ["So16UIStateRestoringP", "Int"]
 - !private ["So16UIStateRestoringP", "String"]
-- !private ["So16UIStateRestoringP", "UIColor"]
+- !private ["So16UIStateRestoringP", "addressData"]
 - !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
 - !private ["So16UIStateRestoringP", "dismiss"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "numRows"]
+- !private ["So16UIStateRestoringP", "orderAddress"]
 - !private ["So16UIStateRestoringP", "orderItems"]
 - !private ["So16UIStateRestoringP", "orderName"]
+- !private ["So16UIStateRestoringP", "phoneNumber"]
 - !private ["So16UIStateRestoringP", "ref"]
 - !private ["So16UIStateRestoringP", "tableView"]
 - !private ["So16UIStateRestoringP", "title"]
-- !private ["So16UIStateRestoringP", "toolbar"]
 - !private ["So16UIStateRestoringP", "viewDidAppear"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - ["So16UIStateRestoringP", ""]
-- !private ["So11UITableViewC", "backgroundColor"]
 - !private ["So11UITableViewC", "dequeueReusableCell"]
 - !private ["So11UITableViewC", "reloadData"]
+- !private ["So15UITableViewCellC", "addressLabel"]
 - !private ["So15UITableViewCellC", "detailTextLabel"]
+- !private ["So15UITableViewCellC", "phoneLabel"]
 - !private ["So15UITableViewCellC", "textLabel"]
 - !private ["So21UITableViewControllerC", "Auth"]
 - ["So21UITableViewControllerC", "Bool"]
@@ -742,22 +778,24 @@ depends-member:
 - ["So21UITableViewControllerC", "Int"]
 - ["So21UITableViewControllerC", "String"]
 - ["So21UITableViewControllerC", "UIBarButtonItem"]
-- !private ["So21UITableViewControllerC", "UIColor"]
 - ["So21UITableViewControllerC", "UITableView"]
 - ["So21UITableViewControllerC", "UITableViewCell"]
+- ["So21UITableViewControllerC", "addressData"]
 - ["So21UITableViewControllerC", "backButton"]
+- !private ["So21UITableViewControllerC", "deliveryDescriptionTableViewCell"]
 - ["So21UITableViewControllerC", "didReceiveMemoryWarning"]
 - !private ["So21UITableViewControllerC", "dismiss"]
 - ["So21UITableViewControllerC", "init"]
 - ["So21UITableViewControllerC", "markDeliveredBarButton"]
 - ["So21UITableViewControllerC", "numRows"]
 - ["So21UITableViewControllerC", "numberOfSections"]
+- ["So21UITableViewControllerC", "orderAddress"]
 - ["So21UITableViewControllerC", "orderItems"]
 - ["So21UITableViewControllerC", "orderName"]
+- ["So21UITableViewControllerC", "phoneNumber"]
 - ["So21UITableViewControllerC", "ref"]
 - ["So21UITableViewControllerC", "tableView"]
 - !private ["So21UITableViewControllerC", "title"]
-- ["So21UITableViewControllerC", "toolbar"]
 - ["So21UITableViewControllerC", "viewDidAppear"]
 - ["So21UITableViewControllerC", "viewDidLoad"]
 - ["So21UITableViewControllerC", ""]
@@ -766,17 +804,18 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "Database"]
 - !private ["So21UITableViewDataSourceP", "Int"]
 - !private ["So21UITableViewDataSourceP", "String"]
-- !private ["So21UITableViewDataSourceP", "UIColor"]
+- !private ["So21UITableViewDataSourceP", "addressData"]
 - !private ["So21UITableViewDataSourceP", "didReceiveMemoryWarning"]
 - !private ["So21UITableViewDataSourceP", "dismiss"]
 - !private ["So21UITableViewDataSourceP", "init"]
 - !private ["So21UITableViewDataSourceP", "numRows"]
+- !private ["So21UITableViewDataSourceP", "orderAddress"]
 - !private ["So21UITableViewDataSourceP", "orderItems"]
 - !private ["So21UITableViewDataSourceP", "orderName"]
+- !private ["So21UITableViewDataSourceP", "phoneNumber"]
 - !private ["So21UITableViewDataSourceP", "ref"]
 - !private ["So21UITableViewDataSourceP", "tableView"]
 - !private ["So21UITableViewDataSourceP", "title"]
-- !private ["So21UITableViewDataSourceP", "toolbar"]
 - !private ["So21UITableViewDataSourceP", "viewDidAppear"]
 - !private ["So21UITableViewDataSourceP", "viewDidLoad"]
 - ["So21UITableViewDataSourceP", ""]
@@ -785,17 +824,18 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "Database"]
 - !private ["So19UITableViewDelegateP", "Int"]
 - !private ["So19UITableViewDelegateP", "String"]
-- !private ["So19UITableViewDelegateP", "UIColor"]
+- !private ["So19UITableViewDelegateP", "addressData"]
 - !private ["So19UITableViewDelegateP", "didReceiveMemoryWarning"]
 - !private ["So19UITableViewDelegateP", "dismiss"]
 - !private ["So19UITableViewDelegateP", "init"]
 - !private ["So19UITableViewDelegateP", "numRows"]
+- !private ["So19UITableViewDelegateP", "orderAddress"]
 - !private ["So19UITableViewDelegateP", "orderItems"]
 - !private ["So19UITableViewDelegateP", "orderName"]
+- !private ["So19UITableViewDelegateP", "phoneNumber"]
 - !private ["So19UITableViewDelegateP", "ref"]
 - !private ["So19UITableViewDelegateP", "tableView"]
 - !private ["So19UITableViewDelegateP", "title"]
-- !private ["So19UITableViewDelegateP", "toolbar"]
 - !private ["So19UITableViewDelegateP", "viewDidAppear"]
 - !private ["So19UITableViewDelegateP", "viewDidLoad"]
 - ["So19UITableViewDelegateP", ""]
@@ -804,29 +844,32 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "Database"]
 - !private ["So18UITraitEnvironmentP", "Int"]
 - !private ["So18UITraitEnvironmentP", "String"]
-- !private ["So18UITraitEnvironmentP", "UIColor"]
-- !private ["So18UITraitEnvironmentP", "backgroundColor"]
+- !private ["So18UITraitEnvironmentP", "addressData"]
+- !private ["So18UITraitEnvironmentP", "addressLabel"]
 - !private ["So18UITraitEnvironmentP", "dequeueReusableCell"]
 - !private ["So18UITraitEnvironmentP", "detailTextLabel"]
 - !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UITraitEnvironmentP", "dismiss"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "numRows"]
+- !private ["So18UITraitEnvironmentP", "orderAddress"]
 - !private ["So18UITraitEnvironmentP", "orderItems"]
 - !private ["So18UITraitEnvironmentP", "orderName"]
+- !private ["So18UITraitEnvironmentP", "phoneLabel"]
+- !private ["So18UITraitEnvironmentP", "phoneNumber"]
 - !private ["So18UITraitEnvironmentP", "ref"]
 - !private ["So18UITraitEnvironmentP", "reloadData"]
 - !private ["So18UITraitEnvironmentP", "tableView"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "textLabel"]
 - !private ["So18UITraitEnvironmentP", "title"]
-- !private ["So18UITraitEnvironmentP", "toolbar"]
 - !private ["So18UITraitEnvironmentP", "viewDidAppear"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
 - ["So18UITraitEnvironmentP", ""]
-- !private ["So6UIViewC", "backgroundColor"]
+- !private ["So6UIViewC", "addressLabel"]
 - !private ["So6UIViewC", "dequeueReusableCell"]
 - !private ["So6UIViewC", "detailTextLabel"]
+- !private ["So6UIViewC", "phoneLabel"]
 - !private ["So6UIViewC", "reloadData"]
 - !private ["So6UIViewC", "text"]
 - !private ["So6UIViewC", "textLabel"]
@@ -839,22 +882,24 @@ depends-member:
 - ["So16UIViewControllerC", "Int"]
 - ["So16UIViewControllerC", "String"]
 - ["So16UIViewControllerC", "UIBarButtonItem"]
-- !private ["So16UIViewControllerC", "UIColor"]
 - ["So16UIViewControllerC", "UITableView"]
 - ["So16UIViewControllerC", "UITableViewCell"]
+- ["So16UIViewControllerC", "addressData"]
 - ["So16UIViewControllerC", "backButton"]
+- !private ["So16UIViewControllerC", "deliveryDescriptionTableViewCell"]
 - ["So16UIViewControllerC", "didReceiveMemoryWarning"]
 - !private ["So16UIViewControllerC", "dismiss"]
 - ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "markDeliveredBarButton"]
 - ["So16UIViewControllerC", "numRows"]
 - ["So16UIViewControllerC", "numberOfSections"]
+- ["So16UIViewControllerC", "orderAddress"]
 - ["So16UIViewControllerC", "orderItems"]
 - ["So16UIViewControllerC", "orderName"]
+- ["So16UIViewControllerC", "phoneNumber"]
 - ["So16UIViewControllerC", "ref"]
 - ["So16UIViewControllerC", "tableView"]
 - !private ["So16UIViewControllerC", "title"]
-- ["So16UIViewControllerC", "toolbar"]
 - ["So16UIViewControllerC", "viewDidAppear"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["So4UserC", "uid"]
@@ -871,9 +916,10 @@ depends-member:
 - !private ["s23_BidirectionalIndexableP", "subscript"]
 - !private ["s23_BidirectionalIndexableP", "value"]
 - !private ["s18_BitwiseOperationsP", "init"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addressLabel"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "dequeueReusableCell"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "detailTextLabel"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "phoneLabel"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "reloadData"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textLabel"]
@@ -883,14 +929,13 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s24_DestructorSafeContainerP", "value"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- !private ["s26_ExpressibleByColorLiteralP", "green"]
-- !private ["s33_ExpressibleByStringInterpolationP", "init"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s10_IndexableP", "append"]
 - ["s10_IndexableP", "init"]
 - !private ["s10_IndexableP", "item"]
@@ -908,9 +953,9 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Database"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addressData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addressLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "child"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "children"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "childrenCount"]
@@ -920,13 +965,15 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "detailTextLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "green"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "key"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "numRows"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "observeSingleEvent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "orderAddress"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "orderItems"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "orderName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "phoneLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "phoneNumber"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ref"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reference"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reloadData"]
@@ -934,7 +981,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "textLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "toolbar"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "updateChildValues"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
@@ -964,7 +1010,9 @@ depends-member:
 - !private ["s26_RangeReplaceableIndexableP", "subscript"]
 - !private ["s26_RangeReplaceableIndexableP", "value"]
 - !private ["s11_StrideableP", "init"]
-- !private ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["12Shop_Hosting32deliveryDescriptionTableViewCellC", "addressLabel"]
+- !private ["12Shop_Hosting32deliveryDescriptionTableViewCellC", "phoneLabel"]
 - !private ["12Shop_Hosting30storeOrdersTableViewControllerC", "Auth"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "Bool"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "DataSnapshot"]
@@ -974,23 +1022,25 @@ depends-member:
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "Int"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "String"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "UIBarButtonItem"]
-- !private ["12Shop_Hosting30storeOrdersTableViewControllerC", "UIColor"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "UITableView"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "UITableViewCell"]
+- ["12Shop_Hosting30storeOrdersTableViewControllerC", "addressData"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "backButton"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "deinit"]
+- !private ["12Shop_Hosting30storeOrdersTableViewControllerC", "deliveryDescriptionTableViewCell"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "didReceiveMemoryWarning"]
 - !private ["12Shop_Hosting30storeOrdersTableViewControllerC", "dismiss"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "init"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "markDeliveredBarButton"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "numRows"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "numberOfSections"]
+- ["12Shop_Hosting30storeOrdersTableViewControllerC", "orderAddress"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "orderItems"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "orderName"]
+- ["12Shop_Hosting30storeOrdersTableViewControllerC", "phoneNumber"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "ref"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "tableView"]
 - !private ["12Shop_Hosting30storeOrdersTableViewControllerC", "title"]
-- ["12Shop_Hosting30storeOrdersTableViewControllerC", "toolbar"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "viewDidAppear"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "viewDidLoad"]
 depends-nominal:
@@ -1003,9 +1053,9 @@ depends-nominal:
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
 - "s10CollectionP"
-- !private "s10ComparableP"
+- "s10ComparableP"
 - "s28CustomDebugStringConvertibleP"
-- !private "s29CustomPlaygroundQuickLookableP"
+- "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "SC13DataEventTypeO"
@@ -1018,46 +1068,49 @@ depends-nominal:
 - "s9EquatableP"
 - "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s17FixedWidthIntegerP"
 - "s8HashableP"
 - !private "10Foundation9IndexPathV"
 - !private "Si"
-- !private "s25LosslessStringConvertibleP"
-- !private "s10MirrorPathP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- !private "s25MutableBidirectionalSliceV"
 - "s17MutableCollectionP"
+- !private "s24MutableRandomAccessSliceV"
+- !private "s12MutableSliceV"
 - "So8NSCodingP"
-- !private "So9NSCopyingP"
+- "So9NSCopyingP"
 - "So26NSExtensionRequestHandlingP"
-- !private "So21NSItemProviderReadingP"
-- !private "So21NSItemProviderWritingP"
-- !private "So16NSMutableCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
 - "So8NSObjectC"
 - "So16NSObjectProtocolP"
-- !private "So14NSSecureCodingP"
-- !private "So8NSStringC"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
 - !private "s7NumericP"
 - "s22RandomAccessCollectionP"
 - "s26RangeReplaceableCollectionP"
+- !private "s21RangeReplaceableSliceV"
 - !private "s16RawRepresentableP"
 - !private "10Foundation20ReferenceConvertibleP"
 - "s8SequenceP"
 - !private "s13SignedIntegerP"
 - !private "s13SignedNumericP"
 - !private "s10StrideableP"
-- !private "SS"
-- !private "s14StringProtocolP"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
 - !private "So15UIBarButtonItemC"
 - !private "So9UIBarItemC"
-- !private "So7UIColorC"
 - "So18UIContentContainerP"
 - !private "So30UIContentSizeCategoryAdjustingP"
 - !private "So17UICoordinateSpaceP"
@@ -1090,14 +1143,13 @@ depends-nominal:
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
-- !private "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
-- !private "s26_ExpressibleByColorLiteralP"
-- !private "s33_ExpressibleByStringInterpolationP"
-- !private "s35_HasCustomAnyHashableRepresentationP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
 - "s10_IndexableP"
 - "s14_IndexableBaseP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -1106,24 +1158,25 @@ depends-nominal:
 - "s22_RandomAccessIndexableP"
 - "s26_RangeReplaceableIndexableP"
 - !private "s11_StrideableP"
-- !private "s16_SwiftStringViewP"
+- "s16_SwiftStringViewP"
+- !private "12Shop_Hosting32deliveryDescriptionTableViewCellC"
 - "12Shop_Hosting30storeOrdersTableViewControllerC"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FIRInstanceID.h"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FirebaseInstanceID.h"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRMutableData.h"
@@ -1183,4 +1236,15 @@ depends-external:
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Firebase/Core/Sources/module.modulemap"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
-interface-hash: "8a72788031f312e3004317842182c13e"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include/Darwin.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "e02bb141250386a6a8e615635706cf37"

@@ -9,6 +9,16 @@
 import UIKit
 import Firebase
 
+func substring(string: String, fromIndex: Int, toIndex: Int) -> String? {
+    if fromIndex < toIndex && toIndex < string.count /*use string.characters.count for swift3*/{
+        let startIndex = string.index(string.startIndex, offsetBy: fromIndex)
+        let endIndex = string.index(string.startIndex, offsetBy: toIndex)
+        return String(string[startIndex..<endIndex])
+    }else{
+        return nil
+    }
+}
+
 class shopOrdersTableViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -29,6 +39,8 @@ class shopOrdersTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        time = Date.init().description
+        monthDay = substring(string: time, fromIndex: 5, toIndex: 10)
         self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopOrders").observeSingleEvent(of: .value, with: {(snapshot) in
             if snapshot.exists() {
                 self.numRows = (Int)(snapshot.childrenCount)
@@ -40,6 +52,20 @@ class shopOrdersTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         })
+        self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopOrders").observeSingleEvent(of: .value, with: {(snapshot) in
+            let times = snapshot
+                .children
+                .flatMap { $0 as? DataSnapshot }
+                .flatMap { $0.value as? [String:Any] }
+                .flatMap { $0["time"] as? String }
+            self.orderTimes = times
+            let numbers = snapshot
+                .children
+                .flatMap { $0 as? DataSnapshot }
+                .flatMap { $0.value as? [String:Any] }
+                .flatMap { $0["phoneNumber"] as? String }
+            self.orderNumbers = numbers
+        })
     }
 
     
@@ -49,7 +75,19 @@ class shopOrdersTableViewController: UITableViewController {
     
     var myOrders = [DataSnapshot]()
     
+    var orderTimes : [String]!
+    
+    var orderNumbers: [String]!
+    
     var numRows = 0
+    
+    var time = Date.init().description
+    
+    var monthDay : String!
+    
+    var phoneNumberToSegueTo : String!
+    
+    var editedPhoneNumbers : [String] = []
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -71,9 +109,30 @@ class shopOrdersTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myOrderCells", for: indexPath)
-
-        cell.textLabel?.text = myOrders[indexPath.item].key
-
+        if let currentCell = cell as? shopOrderTableViewCell {
+            let shopLabel = myOrders[indexPath.item].key
+            currentCell.orderLabel = shopLabel
+            var phoneNumber = orderNumbers[indexPath.item]
+            phoneNumber.insert("-", at: phoneNumber.index(phoneNumber.startIndex, offsetBy: (3)))
+            phoneNumber.insert("-", at: phoneNumber.index(phoneNumber.startIndex, offsetBy: (7)))
+            currentCell.phoneNumber.text = phoneNumber
+            editedPhoneNumbers.append(phoneNumber)
+            let time = orderTimes[indexPath.item]
+            let adjustedTime = substring(string: time, fromIndex: 5, toIndex: 10)
+            if monthDay == adjustedTime {
+                var adjustedHours = (Int)((substring(string: adjustedTime!, fromIndex: 0, toIndex: 2))!)
+                if adjustedHours! >= 12 {
+                    adjustedHours! -= 12
+                    currentCell.timeLabel.text = (String)(describing: adjustedHours!) + substring(string: adjustedTime!, fromIndex: 2, toIndex: 5)! + " am"
+                }
+                else {
+                    currentCell.timeLabel.text = substring(string: time, fromIndex: 11, toIndex: 16)! + " pm"
+                }
+            }
+            else {
+                currentCell.timeLabel.text = adjustedTime
+            }
+        }
         return cell
     }
     
@@ -84,6 +143,7 @@ class shopOrdersTableViewController: UITableViewController {
             if let navVC = segue.destination as? UINavigationController {
                 if let vc = navVC.viewControllers.first as? storeOrdersTableViewController {
                     vc.orderName = self.orderToSegueTo
+                    vc.phoneNumber = self.phoneNumberToSegueTo
                 }
             }
         }
@@ -91,6 +151,7 @@ class shopOrdersTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         orderToSegueTo = myOrders[indexPath.item].key
+        phoneNumberToSegueTo = editedPhoneNumbers[indexPath.item]
         performSegue(withIdentifier: "toOrder", sender: nil)
     }
     

@@ -1,3 +1,27 @@
 Need to do:
 
-Set up phone number in database and user creation page
+change toolbar color based on delivery status
+
+add user info at the top of a shop order
+
+hook up my shops to allow for edits
+
+hook up a custom cell at top of shop for title caption and image
+
+add images to items when creating a shop. To be chosen from phone images
+
+change shops and my shops to have images in table cell
+
+allow for notifications when someone orders from your shop
+
+replace shop order title with the time or user, hide the actual shop order detail in a custom cell, do the same for my orders
+
+have orders and my orders appear in color for delivered and not delivered
+
+have cells be sorted by delivered and then time
+
+make sure referral codes are not being duplicated
+
+flip shop orders order from newest to oldest
+
+make it look good

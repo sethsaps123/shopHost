@@ -267,6 +267,17 @@ SWIFT_CLASS("_TtC12Shop_Hosting29createShopTableViewController")
 @end
 
 
+SWIFT_CLASS("_TtC12Shop_Hosting32deliveryDescriptionTableViewCell")
+@interface deliveryDescriptionTableViewCell : UITableViewCell
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified phoneLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified addressLabel;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC12Shop_Hosting28deliveryDetailViewController")
 @interface deliveryDetailViewController : UIViewController
 - (void)viewDidLoad;
@@ -275,8 +286,39 @@ SWIFT_CLASS("_TtC12Shop_Hosting28deliveryDetailViewController")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified cityTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified stateTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified zipTextField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified phoneNumberTextField;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified warningMessage;
 - (IBAction)checkoutButton:(UIBarButtonItem * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC12Shop_Hosting21editShopTableViewCell")
+@interface editShopTableViewCell : UITableViewCell
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified storeImage;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified shopNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified shopReferralCodeLabel;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC12Shop_Hosting27editShopTableViewController")
+@interface editShopTableViewController : UITableViewController
+- (void)viewDidLoad;
+- (IBAction)addItem:(UIBarButtonItem * _Nonnull)sender;
+- (IBAction)cancelBarButton:(UIBarButtonItem * _Nonnull)sender;
+- (IBAction)editSaveBarButton:(UIBarButtonItem * _Nonnull)sender;
+- (void)didReceiveMemoryWarning;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)tableView:(UITableView * _Nonnull)tableView canEditRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -308,6 +350,7 @@ SWIFT_CLASS("_TtC12Shop_Hosting19loginViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC12Shop_Hosting26myShopsTableViewController")
 @interface myShopsTableViewController : UITableViewController
@@ -318,6 +361,8 @@ SWIFT_CLASS("_TtC12Shop_Hosting26myShopsTableViewController")
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -332,7 +377,6 @@ SWIFT_CLASS("_TtC12Shop_Hosting21newItemViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC12Shop_Hosting25ordersTableViewController")
 @interface ordersTableViewController : UITableViewController
@@ -369,6 +413,17 @@ SWIFT_CLASS("_TtC12Shop_Hosting21shopListTableViewCell")
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified shopName;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC12Shop_Hosting22shopOrderTableViewCell")
+@interface shopOrderTableViewCell : UITableViewCell
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified phoneNumber;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified timeLabel;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -414,6 +469,17 @@ SWIFT_CLASS("_TtC12Shop_Hosting27shopTitleTableTableViewCell")
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified shopNameTextField;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC12Shop_Hosting31singleItemEditableTableViewCell")
+@interface singleItemEditableTableViewCell : UITableViewCell
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified itemName;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified itemPrice;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

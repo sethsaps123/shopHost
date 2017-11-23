@@ -22,11 +22,22 @@ class storeOrdersTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.title = orderName
+        //self.title = orderName
+        self.title = "User Order"
         ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopOrders").child(orderName).child("order").observeSingleEvent(of: .value, with: {(snapshot) in
-            self.numRows = (Int)(snapshot.childrenCount)
+            self.numRows = (Int)(snapshot.childrenCount) + 1
             for item in snapshot.children {
                 self.orderItems.append(item as! DataSnapshot)
+            }
+            self.tableView.reloadData()
+        })
+        ref.child("users").child((Auth.auth().currentUser?.uid)!).child("shopOrders").child(orderName).child("deliveryDetails").observeSingleEvent(of: .value, with: {(snapshot) in
+            for item in snapshot.children {
+                self.addressData.append(item as! DataSnapshot)
+            }
+            for item in self.self.addressData {
+                let tempString : String = (String)(describing: (item.value)!)
+                self.orderAddress = self.orderAddress + tempString + " "
             }
             self.tableView.reloadData()
         })
@@ -38,11 +49,17 @@ class storeOrdersTableViewController: UITableViewController {
     
     var orderName: String!
     
-    var numRows = 0
+    var numRows = 1
     
     var ref: DatabaseReference!
     
     var orderItems = [DataSnapshot]()
+    
+    var addressData = [DataSnapshot]()
+    
+    var phoneNumber : String!
+    
+    var orderAddress = "Address: "
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -63,9 +80,22 @@ class storeOrdersTableViewController: UITableViewController {
     
     
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "singleShopOrderCell", for: indexPath)
-     cell.textLabel?.text = orderItems[indexPath.item].key
-     cell.detailTextLabel?.text = (String)(describing: (orderItems[indexPath.item].value)!)
+        if indexPath.item != 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "singleShopOrderCell", for: indexPath)
+            cell.textLabel?.text = orderItems[indexPath.item - 1].key
+            cell.detailTextLabel?.text = (String)(describing: (orderItems[indexPath.item - 1].value)!)
+            return cell
+        }
+        else if indexPath.item == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "shopDescriptionShopOrder", for: indexPath)
+            if let currentCell = cell as? deliveryDescriptionTableViewCell {
+                currentCell.addressLabel.text = orderAddress
+                currentCell.phoneLabel.text = "Phone: " + phoneNumber
+                return currentCell
+            }
+        
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "singleShopOrderCell", for: indexPath)
      // Configure the cell...
      
      return cell

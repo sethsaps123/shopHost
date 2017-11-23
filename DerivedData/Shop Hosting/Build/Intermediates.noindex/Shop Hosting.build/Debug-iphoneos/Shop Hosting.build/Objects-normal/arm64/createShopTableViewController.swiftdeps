@@ -46,7 +46,6 @@ depends-top-level:
 depends-member:
 - !private ["So4AuthC", "auth"]
 - !private ["So4AuthC", "currentUser"]
-- !private ["s23BidirectionalCollectionP", "characters"]
 - !private ["s23BidirectionalCollectionP", "count"]
 - !private ["s23BidirectionalCollectionP", "index"]
 - !private ["s23BidirectionalCollectionP", "init"]
@@ -78,8 +77,8 @@ depends-member:
 - !private ["s7CVarArgP", "arc4random_uniform"]
 - !private ["s7CVarArgP", "auth"]
 - !private ["s7CVarArgP", "cellForRow"]
-- !private ["s7CVarArgP", "characters"]
 - !private ["s7CVarArgP", "child"]
+- !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "currentUser"]
 - !private ["s7CVarArgP", "database"]
 - !private ["s7CVarArgP", "dequeueReusableCell"]
@@ -112,15 +111,13 @@ depends-member:
 - !private ["s7CVarArgP", "updateChildValues"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - ["s7CVarArgP", ""]
-- !private ["SS13CharacterViewV", "count"]
-- !private ["s10CollectionP", "characters"]
 - !private ["s10CollectionP", "count"]
 - !private ["s10CollectionP", "index"]
 - !private ["s10CollectionP", "init"]
 - !private ["s10CollectionP", "item"]
 - !private ["s10CollectionP", "startIndex"]
 - !private ["s10CollectionP", "subscript"]
-- !private ["s10ComparableP", "characters"]
+- !private ["s10ComparableP", "count"]
 - !private ["s10ComparableP", "index"]
 - !private ["s10ComparableP", "init"]
 - !private ["s10ComparableP", "item"]
@@ -139,8 +136,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "arc4random_uniform"]
 - !private ["s28CustomDebugStringConvertibleP", "auth"]
 - !private ["s28CustomDebugStringConvertibleP", "cellForRow"]
-- !private ["s28CustomDebugStringConvertibleP", "characters"]
 - !private ["s28CustomDebugStringConvertibleP", "child"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "currentUser"]
 - !private ["s28CustomDebugStringConvertibleP", "database"]
 - !private ["s28CustomDebugStringConvertibleP", "dequeueReusableCell"]
@@ -175,13 +172,13 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- !private ["s29CustomPlaygroundQuickLookableP", "characters"]
+- !private ["s29CustomPlaygroundQuickLookableP", "count"]
 - !private ["s29CustomPlaygroundQuickLookableP", "index"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "startIndex"]
 - !private ["s29CustomPlaygroundQuickLookableP", "subscript"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
-- !private ["s17CustomReflectableP", "characters"]
+- !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "index"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "item"]
@@ -201,8 +198,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "arc4random_uniform"]
 - !private ["s23CustomStringConvertibleP", "auth"]
 - !private ["s23CustomStringConvertibleP", "cellForRow"]
-- !private ["s23CustomStringConvertibleP", "characters"]
 - !private ["s23CustomStringConvertibleP", "child"]
+- !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "currentUser"]
 - !private ["s23CustomStringConvertibleP", "database"]
 - !private ["s23CustomStringConvertibleP", "dequeueReusableCell"]
@@ -249,7 +246,7 @@ depends-member:
 - !private ["So17DatabaseReferenceC", "setValue"]
 - !private ["So17DatabaseReferenceC", "updateChildValues"]
 - !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "characters"]
+- !private ["s9DecodableP", "count"]
 - !private ["s9DecodableP", "index"]
 - !private ["s9DecodableP", "init"]
 - !private ["s9DecodableP", "item"]
@@ -258,7 +255,7 @@ depends-member:
 - !private ["s10DictionaryV", "subscript"]
 - !private ["Sd", "init"]
 - !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "characters"]
+- !private ["s9EncodableP", "count"]
 - !private ["s9EncodableP", "index"]
 - !private ["s9EncodableP", "init"]
 - !private ["s9EncodableP", "item"]
@@ -280,8 +277,8 @@ depends-member:
 - !private ["s9EquatableP", "auth"]
 - !private ["s9EquatableP", "cancel"]
 - !private ["s9EquatableP", "cellForRow"]
-- !private ["s9EquatableP", "characters"]
 - !private ["s9EquatableP", "child"]
+- !private ["s9EquatableP", "count"]
 - !private ["s9EquatableP", "currentUser"]
 - !private ["s9EquatableP", "database"]
 - !private ["s9EquatableP", "dequeueReusableCell"]
@@ -319,19 +316,19 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "item"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "characters"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "count"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "index"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "startIndex"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "subscript"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
-- !private ["s26ExpressibleByStringLiteralP", "characters"]
+- !private ["s26ExpressibleByStringLiteralP", "count"]
 - !private ["s26ExpressibleByStringLiteralP", "index"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "startIndex"]
 - !private ["s26ExpressibleByStringLiteralP", "subscript"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", "characters"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "count"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "index"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "startIndex"]
@@ -354,8 +351,8 @@ depends-member:
 - !private ["s8HashableP", "auth"]
 - !private ["s8HashableP", "cancel"]
 - !private ["s8HashableP", "cellForRow"]
-- !private ["s8HashableP", "characters"]
 - !private ["s8HashableP", "child"]
+- !private ["s8HashableP", "count"]
 - !private ["s8HashableP", "currentUser"]
 - !private ["s8HashableP", "database"]
 - !private ["s8HashableP", "dequeueReusableCell"]
@@ -393,12 +390,12 @@ depends-member:
 - !private ["10Foundation9IndexPathV", "item"]
 - !private ["Si", "init"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
-- !private ["s25LosslessStringConvertibleP", "characters"]
+- !private ["s25LosslessStringConvertibleP", "count"]
 - !private ["s25LosslessStringConvertibleP", "index"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "startIndex"]
 - !private ["s25LosslessStringConvertibleP", "subscript"]
-- !private ["s10MirrorPathP", "characters"]
+- !private ["s10MirrorPathP", "count"]
 - !private ["s10MirrorPathP", "index"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "startIndex"]
@@ -416,7 +413,7 @@ depends-member:
 - !private ["So8NSCodingP", "addAction"]
 - !private ["So8NSCodingP", "arc4random_uniform"]
 - !private ["So8NSCodingP", "cellForRow"]
-- !private ["So8NSCodingP", "characters"]
+- !private ["So8NSCodingP", "count"]
 - !private ["So8NSCodingP", "dequeueReusableCell"]
 - !private ["So8NSCodingP", "didReceiveMemoryWarning"]
 - !private ["So8NSCodingP", "dismiss"]
@@ -441,7 +438,7 @@ depends-member:
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - ["So8NSCodingP", ""]
-- !private ["So9NSCopyingP", "characters"]
+- !private ["So9NSCopyingP", "count"]
 - !private ["So9NSCopyingP", "index"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "startIndex"]
@@ -471,17 +468,17 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So11NSIndexPathC", "init"]
-- !private ["So21NSItemProviderReadingP", "characters"]
+- !private ["So21NSItemProviderReadingP", "count"]
 - !private ["So21NSItemProviderReadingP", "index"]
 - !private ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderReadingP", "startIndex"]
 - !private ["So21NSItemProviderReadingP", "subscript"]
-- !private ["So21NSItemProviderWritingP", "characters"]
+- !private ["So21NSItemProviderWritingP", "count"]
 - !private ["So21NSItemProviderWritingP", "index"]
 - !private ["So21NSItemProviderWritingP", "init"]
 - !private ["So21NSItemProviderWritingP", "startIndex"]
 - !private ["So21NSItemProviderWritingP", "subscript"]
-- !private ["So16NSMutableCopyingP", "characters"]
+- !private ["So16NSMutableCopyingP", "count"]
 - !private ["So16NSMutableCopyingP", "index"]
 - !private ["So16NSMutableCopyingP", "init"]
 - !private ["So16NSMutableCopyingP", "startIndex"]
@@ -507,8 +504,8 @@ depends-member:
 - !private ["So8NSObjectC", "auth"]
 - ["So8NSObjectC", "cancelButton"]
 - !private ["So8NSObjectC", "cellForRow"]
-- !private ["So8NSObjectC", "characters"]
 - !private ["So8NSObjectC", "child"]
+- !private ["So8NSObjectC", "count"]
 - ["So8NSObjectC", "createShop"]
 - !private ["So8NSObjectC", "currentUser"]
 - !private ["So8NSObjectC", "database"]
@@ -555,8 +552,8 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "arc4random_uniform"]
 - !private ["So16NSObjectProtocolP", "auth"]
 - !private ["So16NSObjectProtocolP", "cellForRow"]
-- !private ["So16NSObjectProtocolP", "characters"]
 - !private ["So16NSObjectProtocolP", "child"]
+- !private ["So16NSObjectProtocolP", "count"]
 - !private ["So16NSObjectProtocolP", "currentUser"]
 - !private ["So16NSObjectProtocolP", "database"]
 - !private ["So16NSObjectProtocolP", "dequeueReusableCell"]
@@ -589,19 +586,18 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "updateChildValues"]
 - !private ["So16NSObjectProtocolP", "viewDidLoad"]
 - ["So16NSObjectProtocolP", ""]
-- !private ["So14NSSecureCodingP", "characters"]
+- !private ["So14NSSecureCodingP", "count"]
 - !private ["So14NSSecureCodingP", "index"]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "startIndex"]
 - !private ["So14NSSecureCodingP", "subscript"]
-- !private ["So8NSStringC", "characters"]
+- !private ["So8NSStringC", "count"]
 - !private ["So8NSStringC", "index"]
 - !private ["So8NSStringC", "init"]
 - !private ["So8NSStringC", "startIndex"]
 - !private ["So8NSStringC", "subscript"]
 - !private ["s7NumericP", "init"]
 - !private ["s22RandomAccessCollectionP", "item"]
-- !private ["s26RangeReplaceableCollectionP", "characters"]
 - !private ["s26RangeReplaceableCollectionP", "count"]
 - !private ["s26RangeReplaceableCollectionP", "index"]
 - !private ["s26RangeReplaceableCollectionP", "init"]
@@ -611,7 +607,6 @@ depends-member:
 - !private ["s16RawRepresentableP", "cancel"]
 - !private ["s16RawRepresentableP", "value"]
 - !private ["10Foundation20ReferenceConvertibleP", "item"]
-- !private ["s8SequenceP", "characters"]
 - !private ["s8SequenceP", "count"]
 - !private ["s8SequenceP", "index"]
 - !private ["s8SequenceP", "init"]
@@ -621,22 +616,22 @@ depends-member:
 - !private ["s13SignedIntegerP", "init"]
 - !private ["s13SignedNumericP", "init"]
 - !private ["s10StrideableP", "init"]
-- !private ["SS", "characters"]
+- !private ["SS", "count"]
 - !private ["SS", "index"]
 - !private ["SS", "init"]
 - !private ["SS", "startIndex"]
 - !private ["SS", "subscript"]
-- !private ["s14StringProtocolP", "characters"]
+- !private ["s14StringProtocolP", "count"]
 - !private ["s14StringProtocolP", "index"]
 - !private ["s14StringProtocolP", "init"]
 - !private ["s14StringProtocolP", "startIndex"]
 - !private ["s14StringProtocolP", "subscript"]
-- !private ["s16TextOutputStreamP", "characters"]
+- !private ["s16TextOutputStreamP", "count"]
 - !private ["s16TextOutputStreamP", "index"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s16TextOutputStreamP", "startIndex"]
 - !private ["s16TextOutputStreamP", "subscript"]
-- !private ["s20TextOutputStreamableP", "characters"]
+- !private ["s20TextOutputStreamableP", "count"]
 - !private ["s20TextOutputStreamableP", "index"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "startIndex"]
@@ -1133,7 +1128,6 @@ depends-member:
 - !private ["s15UnsignedIntegerP", "init"]
 - !private ["So4UserC", "uid"]
 - !private ["So8UserInfoP", "uid"]
-- !private ["s23_BidirectionalIndexableP", "characters"]
 - !private ["s23_BidirectionalIndexableP", "count"]
 - !private ["s23_BidirectionalIndexableP", "index"]
 - !private ["s23_BidirectionalIndexableP", "init"]
@@ -1153,46 +1147,44 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "shopNameTextField"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "characters"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "count"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "index"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "startIndex"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "subscript"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "characters"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "count"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "index"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "startIndex"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "subscript"]
-- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "characters"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "count"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "index"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "startIndex"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "subscript"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "characters"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "count"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "index"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "startIndex"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "subscript"]
-- !private ["s33_ExpressibleByStringInterpolationP", "characters"]
+- !private ["s33_ExpressibleByStringInterpolationP", "count"]
 - !private ["s33_ExpressibleByStringInterpolationP", "index"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "startIndex"]
 - !private ["s33_ExpressibleByStringInterpolationP", "subscript"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "characters"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "index"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "startIndex"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
-- !private ["s10_IndexableP", "characters"]
 - !private ["s10_IndexableP", "count"]
 - !private ["s10_IndexableP", "index"]
 - !private ["s10_IndexableP", "init"]
 - !private ["s10_IndexableP", "item"]
 - !private ["s10_IndexableP", "startIndex"]
 - !private ["s10_IndexableP", "subscript"]
-- !private ["s14_IndexableBaseP", "characters"]
 - !private ["s14_IndexableBaseP", "count"]
 - !private ["s14_IndexableBaseP", "index"]
 - !private ["s14_IndexableBaseP", "init"]
@@ -1212,8 +1204,8 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "arc4random_uniform"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cellForRow"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "characters"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "child"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "count"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "database"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dequeueReusableCell"]
@@ -1248,21 +1240,19 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["s17_MutableIndexableP", "item"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
-- !private ["s21_ObjectiveCBridgeableP", "characters"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "index"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "item"]
 - !private ["s21_ObjectiveCBridgeableP", "startIndex"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s22_RandomAccessIndexableP", "item"]
-- !private ["s26_RangeReplaceableIndexableP", "characters"]
 - !private ["s26_RangeReplaceableIndexableP", "count"]
 - !private ["s26_RangeReplaceableIndexableP", "index"]
 - !private ["s26_RangeReplaceableIndexableP", "init"]
 - !private ["s26_RangeReplaceableIndexableP", "startIndex"]
 - !private ["s26_RangeReplaceableIndexableP", "subscript"]
 - !private ["s11_StrideableP", "init"]
-- !private ["s16_SwiftStringViewP", "characters"]
 - !private ["s16_SwiftStringViewP", "count"]
 - !private ["s16_SwiftStringViewP", "index"]
 - !private ["s16_SwiftStringViewP", "init"]
@@ -1313,7 +1303,6 @@ depends-nominal:
 - !private "Sb"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
-- !private "SS13CharacterViewV"
 - !private "s10CollectionP"
 - !private "s10ComparableP"
 - "s28CustomDebugStringConvertibleP"
@@ -1440,20 +1429,20 @@ depends-nominal:
 - !private "12Shop_Hosting014shopTitleTableE8ViewCellC"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FIRInstanceID.h"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseInstanceID/FirebaseInstanceID/FirebaseInstanceID.h"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Headers/Public/FirebaseDatabase/FirebaseDatabase/FIRMutableData.h"
@@ -1513,15 +1502,4 @@ depends-external:
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/Firebase/Core/Sources/module.modulemap"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
 - "/Users/sethsaps/Desktop/swift projects : summer projects/Shop Hosting/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 interface-hash: "49cb19b5d998e5c9d8d242387e43ad6c"

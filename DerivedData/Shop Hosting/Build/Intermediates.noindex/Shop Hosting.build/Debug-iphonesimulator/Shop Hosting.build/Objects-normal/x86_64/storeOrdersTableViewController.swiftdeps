@@ -14,12 +14,15 @@ provides-dynamic-lookup:
 - "viewDidAppear"
 - "viewDidLoad"
 depends-top-level:
+- !private "!="
+- !private "+"
+- !private "-"
 - !private "=="
 - "AssignmentPrecedence"
 - !private "Auth"
 - "Bool"
 - !private "BooleanLiteralType"
-- !private "CastingPrecedence"
+- "CastingPrecedence"
 - "DataSnapshot"
 - !private "Database"
 - "DatabaseReference"
@@ -27,11 +30,13 @@ depends-top-level:
 - "IndexPath"
 - "Int"
 - "String"
-- !private "StringLiteralType"
+- "StringLiteralType"
 - "UIBarButtonItem"
 - "UITableView"
 - "UITableViewCell"
 - "UITableViewController"
+- "UnicodeScalarType"
+- !private "deliveryDescriptionTableViewCell"
 - "storeOrdersTableViewController"
 depends-member:
 - !private ["Sa", "append"]
@@ -49,8 +54,10 @@ depends-member:
 - !private ["s23BidirectionalCollectionP", "value"]
 - !private ["s13BinaryIntegerP", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So15CALayerDelegateP", "addressLabel"]
 - !private ["So15CALayerDelegateP", "dequeueReusableCell"]
 - !private ["So15CALayerDelegateP", "detailTextLabel"]
+- !private ["So15CALayerDelegateP", "phoneLabel"]
 - !private ["So15CALayerDelegateP", "reloadData"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["So15CALayerDelegateP", "textLabel"]
@@ -59,6 +66,8 @@ depends-member:
 - !private ["s7CVarArgP", "Database"]
 - !private ["s7CVarArgP", "Int"]
 - !private ["s7CVarArgP", "String"]
+- !private ["s7CVarArgP", "addressData"]
+- !private ["s7CVarArgP", "addressLabel"]
 - !private ["s7CVarArgP", "append"]
 - !private ["s7CVarArgP", "auth"]
 - !private ["s7CVarArgP", "child"]
@@ -74,8 +83,11 @@ depends-member:
 - !private ["s7CVarArgP", "key"]
 - !private ["s7CVarArgP", "numRows"]
 - !private ["s7CVarArgP", "observeSingleEvent"]
+- !private ["s7CVarArgP", "orderAddress"]
 - !private ["s7CVarArgP", "orderItems"]
 - !private ["s7CVarArgP", "orderName"]
+- !private ["s7CVarArgP", "phoneLabel"]
+- !private ["s7CVarArgP", "phoneNumber"]
 - !private ["s7CVarArgP", "ref"]
 - !private ["s7CVarArgP", "reference"]
 - !private ["s7CVarArgP", "reloadData"]
@@ -96,13 +108,15 @@ depends-member:
 - !private ["s10CollectionP", "key"]
 - !private ["s10CollectionP", "subscript"]
 - !private ["s10CollectionP", "value"]
-- !private ["s10ComparableP", "init"]
+- ["s10ComparableP", "init"]
 - !private ["s10ComparableP", "item"]
 - !private ["s28CustomDebugStringConvertibleP", "Auth"]
 - ["s28CustomDebugStringConvertibleP", "DataSnapshot"]
 - !private ["s28CustomDebugStringConvertibleP", "Database"]
 - !private ["s28CustomDebugStringConvertibleP", "Int"]
 - !private ["s28CustomDebugStringConvertibleP", "String"]
+- !private ["s28CustomDebugStringConvertibleP", "addressData"]
+- !private ["s28CustomDebugStringConvertibleP", "addressLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
 - !private ["s28CustomDebugStringConvertibleP", "auth"]
 - !private ["s28CustomDebugStringConvertibleP", "child"]
@@ -119,8 +133,11 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "key"]
 - !private ["s28CustomDebugStringConvertibleP", "numRows"]
 - !private ["s28CustomDebugStringConvertibleP", "observeSingleEvent"]
+- !private ["s28CustomDebugStringConvertibleP", "orderAddress"]
 - !private ["s28CustomDebugStringConvertibleP", "orderItems"]
 - !private ["s28CustomDebugStringConvertibleP", "orderName"]
+- !private ["s28CustomDebugStringConvertibleP", "phoneLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "phoneNumber"]
 - !private ["s28CustomDebugStringConvertibleP", "ref"]
 - !private ["s28CustomDebugStringConvertibleP", "reference"]
 - !private ["s28CustomDebugStringConvertibleP", "reloadData"]
@@ -136,7 +153,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "append"]
 - ["s17CustomReflectableP", "init"]
@@ -150,6 +167,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "Int"]
 - !private ["s23CustomStringConvertibleP", "String"]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "addressData"]
+- !private ["s23CustomStringConvertibleP", "addressLabel"]
 - !private ["s23CustomStringConvertibleP", "append"]
 - !private ["s23CustomStringConvertibleP", "auth"]
 - !private ["s23CustomStringConvertibleP", "child"]
@@ -166,8 +185,11 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "key"]
 - !private ["s23CustomStringConvertibleP", "numRows"]
 - !private ["s23CustomStringConvertibleP", "observeSingleEvent"]
+- !private ["s23CustomStringConvertibleP", "orderAddress"]
 - !private ["s23CustomStringConvertibleP", "orderItems"]
 - !private ["s23CustomStringConvertibleP", "orderName"]
+- !private ["s23CustomStringConvertibleP", "phoneLabel"]
+- !private ["s23CustomStringConvertibleP", "phoneNumber"]
 - !private ["s23CustomStringConvertibleP", "ref"]
 - !private ["s23CustomStringConvertibleP", "reference"]
 - !private ["s23CustomStringConvertibleP", "reloadData"]
@@ -211,6 +233,8 @@ depends-member:
 - !private ["s9EquatableP", "Int"]
 - !private ["s9EquatableP", "String"]
 - !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "addressData"]
+- !private ["s9EquatableP", "addressLabel"]
 - !private ["s9EquatableP", "auth"]
 - !private ["s9EquatableP", "child"]
 - !private ["s9EquatableP", "children"]
@@ -221,13 +245,16 @@ depends-member:
 - !private ["s9EquatableP", "detailTextLabel"]
 - !private ["s9EquatableP", "didReceiveMemoryWarning"]
 - !private ["s9EquatableP", "dismiss"]
-- !private ["s9EquatableP", "init"]
+- ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "item"]
 - !private ["s9EquatableP", "key"]
 - !private ["s9EquatableP", "numRows"]
 - !private ["s9EquatableP", "observeSingleEvent"]
+- !private ["s9EquatableP", "orderAddress"]
 - !private ["s9EquatableP", "orderItems"]
 - !private ["s9EquatableP", "orderName"]
+- !private ["s9EquatableP", "phoneLabel"]
+- !private ["s9EquatableP", "phoneNumber"]
 - !private ["s9EquatableP", "ref"]
 - !private ["s9EquatableP", "reference"]
 - !private ["s9EquatableP", "reloadData"]
@@ -248,10 +275,10 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s25ExpressibleByArrayLiteralP", "value"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
-- !private ["s26ExpressibleByStringLiteralP", "init"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s17FixedWidthIntegerP", "init"]
 - !private ["s8HashableP", "Auth"]
 - ["s8HashableP", "DataSnapshot"]
@@ -259,6 +286,8 @@ depends-member:
 - !private ["s8HashableP", "Int"]
 - !private ["s8HashableP", "String"]
 - !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "addressData"]
+- !private ["s8HashableP", "addressLabel"]
 - !private ["s8HashableP", "auth"]
 - !private ["s8HashableP", "child"]
 - !private ["s8HashableP", "children"]
@@ -269,13 +298,16 @@ depends-member:
 - !private ["s8HashableP", "detailTextLabel"]
 - !private ["s8HashableP", "didReceiveMemoryWarning"]
 - !private ["s8HashableP", "dismiss"]
-- !private ["s8HashableP", "init"]
+- ["s8HashableP", "init"]
 - !private ["s8HashableP", "item"]
 - !private ["s8HashableP", "key"]
 - !private ["s8HashableP", "numRows"]
 - !private ["s8HashableP", "observeSingleEvent"]
+- !private ["s8HashableP", "orderAddress"]
 - !private ["s8HashableP", "orderItems"]
 - !private ["s8HashableP", "orderName"]
+- !private ["s8HashableP", "phoneLabel"]
+- !private ["s8HashableP", "phoneNumber"]
 - !private ["s8HashableP", "ref"]
 - !private ["s8HashableP", "reference"]
 - !private ["s8HashableP", "reloadData"]
@@ -292,27 +324,38 @@ depends-member:
 - !private ["10Foundation9IndexPathV", "item"]
 - !private ["Si", "init"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
-- !private ["s25LosslessStringConvertibleP", "init"]
-- !private ["s10MirrorPathP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["s25MutableBidirectionalSliceV", "key"]
+- !private ["s25MutableBidirectionalSliceV", "value"]
 - !private ["s17MutableCollectionP", "append"]
 - ["s17MutableCollectionP", "init"]
 - !private ["s17MutableCollectionP", "item"]
 - !private ["s17MutableCollectionP", "key"]
 - !private ["s17MutableCollectionP", "subscript"]
 - !private ["s17MutableCollectionP", "value"]
+- !private ["s24MutableRandomAccessSliceV", "key"]
+- !private ["s24MutableRandomAccessSliceV", "value"]
+- !private ["s12MutableSliceV", "key"]
+- !private ["s12MutableSliceV", "value"]
 - !private ["So8NSCodingP", "Auth"]
 - ["So8NSCodingP", "DataSnapshot"]
 - !private ["So8NSCodingP", "Database"]
 - !private ["So8NSCodingP", "Int"]
 - !private ["So8NSCodingP", "String"]
+- !private ["So8NSCodingP", "addressData"]
+- !private ["So8NSCodingP", "addressLabel"]
 - !private ["So8NSCodingP", "dequeueReusableCell"]
 - !private ["So8NSCodingP", "detailTextLabel"]
 - !private ["So8NSCodingP", "didReceiveMemoryWarning"]
 - !private ["So8NSCodingP", "dismiss"]
-- !private ["So8NSCodingP", "init"]
+- ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "numRows"]
+- !private ["So8NSCodingP", "orderAddress"]
 - !private ["So8NSCodingP", "orderItems"]
 - !private ["So8NSCodingP", "orderName"]
+- !private ["So8NSCodingP", "phoneLabel"]
+- !private ["So8NSCodingP", "phoneNumber"]
 - !private ["So8NSCodingP", "ref"]
 - !private ["So8NSCodingP", "reloadData"]
 - !private ["So8NSCodingP", "tableView"]
@@ -322,27 +365,30 @@ depends-member:
 - !private ["So8NSCodingP", "viewDidAppear"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - ["So8NSCodingP", ""]
-- !private ["So9NSCopyingP", "init"]
+- ["So9NSCopyingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "Auth"]
 - ["So26NSExtensionRequestHandlingP", "DataSnapshot"]
 - !private ["So26NSExtensionRequestHandlingP", "Database"]
 - !private ["So26NSExtensionRequestHandlingP", "Int"]
 - !private ["So26NSExtensionRequestHandlingP", "String"]
+- !private ["So26NSExtensionRequestHandlingP", "addressData"]
 - !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
 - !private ["So26NSExtensionRequestHandlingP", "dismiss"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "numRows"]
+- !private ["So26NSExtensionRequestHandlingP", "orderAddress"]
 - !private ["So26NSExtensionRequestHandlingP", "orderItems"]
 - !private ["So26NSExtensionRequestHandlingP", "orderName"]
+- !private ["So26NSExtensionRequestHandlingP", "phoneNumber"]
 - !private ["So26NSExtensionRequestHandlingP", "ref"]
 - !private ["So26NSExtensionRequestHandlingP", "tableView"]
 - !private ["So26NSExtensionRequestHandlingP", "title"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidAppear"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - ["So26NSExtensionRequestHandlingP", ""]
-- !private ["So21NSItemProviderReadingP", "init"]
-- !private ["So21NSItemProviderWritingP", "init"]
-- !private ["So16NSMutableCopyingP", "init"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "init"]
+- ["So16NSMutableCopyingP", "init"]
 - !private ["So8NSObjectC", "Auth"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "DataSnapshot"]
@@ -354,6 +400,8 @@ depends-member:
 - ["So8NSObjectC", "UIBarButtonItem"]
 - ["So8NSObjectC", "UITableView"]
 - ["So8NSObjectC", "UITableViewCell"]
+- ["So8NSObjectC", "addressData"]
+- !private ["So8NSObjectC", "addressLabel"]
 - !private ["So8NSObjectC", "auth"]
 - ["So8NSObjectC", "backButton"]
 - !private ["So8NSObjectC", "child"]
@@ -361,6 +409,7 @@ depends-member:
 - !private ["So8NSObjectC", "childrenCount"]
 - !private ["So8NSObjectC", "currentUser"]
 - !private ["So8NSObjectC", "database"]
+- !private ["So8NSObjectC", "deliveryDescriptionTableViewCell"]
 - !private ["So8NSObjectC", "dequeueReusableCell"]
 - !private ["So8NSObjectC", "detailTextLabel"]
 - ["So8NSObjectC", "didReceiveMemoryWarning"]
@@ -371,8 +420,11 @@ depends-member:
 - ["So8NSObjectC", "numRows"]
 - ["So8NSObjectC", "numberOfSections"]
 - !private ["So8NSObjectC", "observeSingleEvent"]
+- ["So8NSObjectC", "orderAddress"]
 - ["So8NSObjectC", "orderItems"]
 - ["So8NSObjectC", "orderName"]
+- !private ["So8NSObjectC", "phoneLabel"]
+- ["So8NSObjectC", "phoneNumber"]
 - ["So8NSObjectC", "ref"]
 - !private ["So8NSObjectC", "reference"]
 - !private ["So8NSObjectC", "reloadData"]
@@ -390,6 +442,8 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "Database"]
 - !private ["So16NSObjectProtocolP", "Int"]
 - !private ["So16NSObjectProtocolP", "String"]
+- !private ["So16NSObjectProtocolP", "addressData"]
+- !private ["So16NSObjectProtocolP", "addressLabel"]
 - !private ["So16NSObjectProtocolP", "auth"]
 - !private ["So16NSObjectProtocolP", "child"]
 - !private ["So16NSObjectProtocolP", "children"]
@@ -400,12 +454,15 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "detailTextLabel"]
 - !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
 - !private ["So16NSObjectProtocolP", "dismiss"]
-- !private ["So16NSObjectProtocolP", "init"]
+- ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "key"]
 - !private ["So16NSObjectProtocolP", "numRows"]
 - !private ["So16NSObjectProtocolP", "observeSingleEvent"]
+- !private ["So16NSObjectProtocolP", "orderAddress"]
 - !private ["So16NSObjectProtocolP", "orderItems"]
 - !private ["So16NSObjectProtocolP", "orderName"]
+- !private ["So16NSObjectProtocolP", "phoneLabel"]
+- !private ["So16NSObjectProtocolP", "phoneNumber"]
 - !private ["So16NSObjectProtocolP", "ref"]
 - !private ["So16NSObjectProtocolP", "reference"]
 - !private ["So16NSObjectProtocolP", "reloadData"]
@@ -419,8 +476,8 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "viewDidAppear"]
 - !private ["So16NSObjectProtocolP", "viewDidLoad"]
 - ["So16NSObjectProtocolP", ""]
-- !private ["So14NSSecureCodingP", "init"]
-- !private ["So8NSStringC", "init"]
+- ["So14NSSecureCodingP", "init"]
+- ["So8NSStringC", "init"]
 - !private ["s7NumericP", "init"]
 - !private ["s22RandomAccessCollectionP", "append"]
 - ["s22RandomAccessCollectionP", "init"]
@@ -433,6 +490,8 @@ depends-member:
 - !private ["s26RangeReplaceableCollectionP", "key"]
 - !private ["s26RangeReplaceableCollectionP", "subscript"]
 - !private ["s26RangeReplaceableCollectionP", "value"]
+- !private ["s21RangeReplaceableSliceV", "key"]
+- !private ["s21RangeReplaceableSliceV", "value"]
 - !private ["s16RawRepresentableP", "value"]
 - !private ["10Foundation20ReferenceConvertibleP", "item"]
 - !private ["s8SequenceP", "append"]
@@ -444,18 +503,22 @@ depends-member:
 - !private ["s13SignedIntegerP", "init"]
 - !private ["s13SignedNumericP", "init"]
 - !private ["s10StrideableP", "init"]
-- !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
-- !private ["s16TextOutputStreamP", "init"]
-- !private ["s20TextOutputStreamableP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "addressLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "dequeueReusableCell"]
 - !private ["So29UIAccessibilityIdentificationP", "detailTextLabel"]
+- !private ["So29UIAccessibilityIdentificationP", "phoneLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "reloadData"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So29UIAccessibilityIdentificationP", "textLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "title"]
+- !private ["So12UIAppearanceP", "addressLabel"]
 - !private ["So12UIAppearanceP", "dequeueReusableCell"]
 - !private ["So12UIAppearanceP", "detailTextLabel"]
+- !private ["So12UIAppearanceP", "phoneLabel"]
 - !private ["So12UIAppearanceP", "reloadData"]
 - !private ["So12UIAppearanceP", "text"]
 - !private ["So12UIAppearanceP", "textLabel"]
@@ -465,14 +528,19 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "Database"]
 - !private ["So21UIAppearanceContainerP", "Int"]
 - !private ["So21UIAppearanceContainerP", "String"]
+- !private ["So21UIAppearanceContainerP", "addressData"]
+- !private ["So21UIAppearanceContainerP", "addressLabel"]
 - !private ["So21UIAppearanceContainerP", "dequeueReusableCell"]
 - !private ["So21UIAppearanceContainerP", "detailTextLabel"]
 - !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
 - !private ["So21UIAppearanceContainerP", "dismiss"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "numRows"]
+- !private ["So21UIAppearanceContainerP", "orderAddress"]
 - !private ["So21UIAppearanceContainerP", "orderItems"]
 - !private ["So21UIAppearanceContainerP", "orderName"]
+- !private ["So21UIAppearanceContainerP", "phoneLabel"]
+- !private ["So21UIAppearanceContainerP", "phoneNumber"]
 - !private ["So21UIAppearanceContainerP", "ref"]
 - !private ["So21UIAppearanceContainerP", "reloadData"]
 - !private ["So21UIAppearanceContainerP", "tableView"]
@@ -489,12 +557,15 @@ depends-member:
 - !private ["So18UIContentContainerP", "Database"]
 - !private ["So18UIContentContainerP", "Int"]
 - !private ["So18UIContentContainerP", "String"]
+- !private ["So18UIContentContainerP", "addressData"]
 - !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
 - !private ["So18UIContentContainerP", "dismiss"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "numRows"]
+- !private ["So18UIContentContainerP", "orderAddress"]
 - !private ["So18UIContentContainerP", "orderItems"]
 - !private ["So18UIContentContainerP", "orderName"]
+- !private ["So18UIContentContainerP", "phoneNumber"]
 - !private ["So18UIContentContainerP", "ref"]
 - !private ["So18UIContentContainerP", "tableView"]
 - !private ["So18UIContentContainerP", "title"]
@@ -502,15 +573,19 @@ depends-member:
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - ["So18UIContentContainerP", ""]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So17UICoordinateSpaceP", "addressLabel"]
 - !private ["So17UICoordinateSpaceP", "dequeueReusableCell"]
 - !private ["So17UICoordinateSpaceP", "detailTextLabel"]
+- !private ["So17UICoordinateSpaceP", "phoneLabel"]
 - !private ["So17UICoordinateSpaceP", "reloadData"]
 - !private ["So17UICoordinateSpaceP", "text"]
 - !private ["So17UICoordinateSpaceP", "textLabel"]
 - !private ["So23UIDataSourceTranslatingP", "dequeueReusableCell"]
 - !private ["So23UIDataSourceTranslatingP", "reloadData"]
+- !private ["So13UIDynamicItemP", "addressLabel"]
 - !private ["So13UIDynamicItemP", "dequeueReusableCell"]
 - !private ["So13UIDynamicItemP", "detailTextLabel"]
+- !private ["So13UIDynamicItemP", "phoneLabel"]
 - !private ["So13UIDynamicItemP", "reloadData"]
 - !private ["So13UIDynamicItemP", "text"]
 - !private ["So13UIDynamicItemP", "textLabel"]
@@ -519,14 +594,19 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "Database"]
 - !private ["So18UIFocusEnvironmentP", "Int"]
 - !private ["So18UIFocusEnvironmentP", "String"]
+- !private ["So18UIFocusEnvironmentP", "addressData"]
+- !private ["So18UIFocusEnvironmentP", "addressLabel"]
 - !private ["So18UIFocusEnvironmentP", "dequeueReusableCell"]
 - !private ["So18UIFocusEnvironmentP", "detailTextLabel"]
 - !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UIFocusEnvironmentP", "dismiss"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "numRows"]
+- !private ["So18UIFocusEnvironmentP", "orderAddress"]
 - !private ["So18UIFocusEnvironmentP", "orderItems"]
 - !private ["So18UIFocusEnvironmentP", "orderName"]
+- !private ["So18UIFocusEnvironmentP", "phoneLabel"]
+- !private ["So18UIFocusEnvironmentP", "phoneNumber"]
 - !private ["So18UIFocusEnvironmentP", "ref"]
 - !private ["So18UIFocusEnvironmentP", "reloadData"]
 - !private ["So18UIFocusEnvironmentP", "tableView"]
@@ -536,12 +616,16 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "viewDidAppear"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - ["So18UIFocusEnvironmentP", ""]
+- !private ["So11UIFocusItemP", "addressLabel"]
 - !private ["So11UIFocusItemP", "dequeueReusableCell"]
 - !private ["So11UIFocusItemP", "detailTextLabel"]
+- !private ["So11UIFocusItemP", "phoneLabel"]
 - !private ["So11UIFocusItemP", "reloadData"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So11UIFocusItemP", "textLabel"]
+- !private ["So27UIGestureRecognizerDelegateP", "addressLabel"]
 - !private ["So27UIGestureRecognizerDelegateP", "detailTextLabel"]
+- !private ["So27UIGestureRecognizerDelegateP", "phoneLabel"]
 - !private ["So27UIGestureRecognizerDelegateP", "textLabel"]
 - !private ["So7UILabelC", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "Auth"]
@@ -549,14 +633,19 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "Database"]
 - !private ["So30UIPasteConfigurationSupportingP", "Int"]
 - !private ["So30UIPasteConfigurationSupportingP", "String"]
+- !private ["So30UIPasteConfigurationSupportingP", "addressData"]
+- !private ["So30UIPasteConfigurationSupportingP", "addressLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "dequeueReusableCell"]
 - !private ["So30UIPasteConfigurationSupportingP", "detailTextLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
 - !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "numRows"]
+- !private ["So30UIPasteConfigurationSupportingP", "orderAddress"]
 - !private ["So30UIPasteConfigurationSupportingP", "orderItems"]
 - !private ["So30UIPasteConfigurationSupportingP", "orderName"]
+- !private ["So30UIPasteConfigurationSupportingP", "phoneLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "phoneNumber"]
 - !private ["So30UIPasteConfigurationSupportingP", "ref"]
 - !private ["So30UIPasteConfigurationSupportingP", "reloadData"]
 - !private ["So30UIPasteConfigurationSupportingP", "tableView"]
@@ -577,7 +666,10 @@ depends-member:
 - ["So11UIResponderC", "UIBarButtonItem"]
 - ["So11UIResponderC", "UITableView"]
 - ["So11UIResponderC", "UITableViewCell"]
+- ["So11UIResponderC", "addressData"]
+- !private ["So11UIResponderC", "addressLabel"]
 - ["So11UIResponderC", "backButton"]
+- !private ["So11UIResponderC", "deliveryDescriptionTableViewCell"]
 - !private ["So11UIResponderC", "dequeueReusableCell"]
 - !private ["So11UIResponderC", "detailTextLabel"]
 - ["So11UIResponderC", "didReceiveMemoryWarning"]
@@ -586,8 +678,11 @@ depends-member:
 - ["So11UIResponderC", "markDeliveredBarButton"]
 - ["So11UIResponderC", "numRows"]
 - ["So11UIResponderC", "numberOfSections"]
+- ["So11UIResponderC", "orderAddress"]
 - ["So11UIResponderC", "orderItems"]
 - ["So11UIResponderC", "orderName"]
+- !private ["So11UIResponderC", "phoneLabel"]
+- ["So11UIResponderC", "phoneNumber"]
 - ["So11UIResponderC", "ref"]
 - !private ["So11UIResponderC", "reloadData"]
 - ["So11UIResponderC", "tableView"]
@@ -601,14 +696,19 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "Database"]
 - !private ["So30UIResponderStandardEditActionsP", "Int"]
 - !private ["So30UIResponderStandardEditActionsP", "String"]
+- !private ["So30UIResponderStandardEditActionsP", "addressData"]
+- !private ["So30UIResponderStandardEditActionsP", "addressLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "dequeueReusableCell"]
 - !private ["So30UIResponderStandardEditActionsP", "detailTextLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
 - !private ["So30UIResponderStandardEditActionsP", "dismiss"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "numRows"]
+- !private ["So30UIResponderStandardEditActionsP", "orderAddress"]
 - !private ["So30UIResponderStandardEditActionsP", "orderItems"]
 - !private ["So30UIResponderStandardEditActionsP", "orderName"]
+- !private ["So30UIResponderStandardEditActionsP", "phoneLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "phoneNumber"]
 - !private ["So30UIResponderStandardEditActionsP", "ref"]
 - !private ["So30UIResponderStandardEditActionsP", "reloadData"]
 - !private ["So30UIResponderStandardEditActionsP", "tableView"]
@@ -625,12 +725,15 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "Database"]
 - !private ["So20UIScrollViewDelegateP", "Int"]
 - !private ["So20UIScrollViewDelegateP", "String"]
+- !private ["So20UIScrollViewDelegateP", "addressData"]
 - !private ["So20UIScrollViewDelegateP", "didReceiveMemoryWarning"]
 - !private ["So20UIScrollViewDelegateP", "dismiss"]
 - !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "numRows"]
+- !private ["So20UIScrollViewDelegateP", "orderAddress"]
 - !private ["So20UIScrollViewDelegateP", "orderItems"]
 - !private ["So20UIScrollViewDelegateP", "orderName"]
+- !private ["So20UIScrollViewDelegateP", "phoneNumber"]
 - !private ["So20UIScrollViewDelegateP", "ref"]
 - !private ["So20UIScrollViewDelegateP", "tableView"]
 - !private ["So20UIScrollViewDelegateP", "title"]
@@ -645,12 +748,15 @@ depends-member:
 - !private ["So16UIStateRestoringP", "Database"]
 - !private ["So16UIStateRestoringP", "Int"]
 - !private ["So16UIStateRestoringP", "String"]
+- !private ["So16UIStateRestoringP", "addressData"]
 - !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
 - !private ["So16UIStateRestoringP", "dismiss"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "numRows"]
+- !private ["So16UIStateRestoringP", "orderAddress"]
 - !private ["So16UIStateRestoringP", "orderItems"]
 - !private ["So16UIStateRestoringP", "orderName"]
+- !private ["So16UIStateRestoringP", "phoneNumber"]
 - !private ["So16UIStateRestoringP", "ref"]
 - !private ["So16UIStateRestoringP", "tableView"]
 - !private ["So16UIStateRestoringP", "title"]
@@ -659,7 +765,9 @@ depends-member:
 - ["So16UIStateRestoringP", ""]
 - !private ["So11UITableViewC", "dequeueReusableCell"]
 - !private ["So11UITableViewC", "reloadData"]
+- !private ["So15UITableViewCellC", "addressLabel"]
 - !private ["So15UITableViewCellC", "detailTextLabel"]
+- !private ["So15UITableViewCellC", "phoneLabel"]
 - !private ["So15UITableViewCellC", "textLabel"]
 - !private ["So21UITableViewControllerC", "Auth"]
 - ["So21UITableViewControllerC", "Bool"]
@@ -672,15 +780,19 @@ depends-member:
 - ["So21UITableViewControllerC", "UIBarButtonItem"]
 - ["So21UITableViewControllerC", "UITableView"]
 - ["So21UITableViewControllerC", "UITableViewCell"]
+- ["So21UITableViewControllerC", "addressData"]
 - ["So21UITableViewControllerC", "backButton"]
+- !private ["So21UITableViewControllerC", "deliveryDescriptionTableViewCell"]
 - ["So21UITableViewControllerC", "didReceiveMemoryWarning"]
 - !private ["So21UITableViewControllerC", "dismiss"]
 - ["So21UITableViewControllerC", "init"]
 - ["So21UITableViewControllerC", "markDeliveredBarButton"]
 - ["So21UITableViewControllerC", "numRows"]
 - ["So21UITableViewControllerC", "numberOfSections"]
+- ["So21UITableViewControllerC", "orderAddress"]
 - ["So21UITableViewControllerC", "orderItems"]
 - ["So21UITableViewControllerC", "orderName"]
+- ["So21UITableViewControllerC", "phoneNumber"]
 - ["So21UITableViewControllerC", "ref"]
 - ["So21UITableViewControllerC", "tableView"]
 - !private ["So21UITableViewControllerC", "title"]
@@ -692,12 +804,15 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "Database"]
 - !private ["So21UITableViewDataSourceP", "Int"]
 - !private ["So21UITableViewDataSourceP", "String"]
+- !private ["So21UITableViewDataSourceP", "addressData"]
 - !private ["So21UITableViewDataSourceP", "didReceiveMemoryWarning"]
 - !private ["So21UITableViewDataSourceP", "dismiss"]
 - !private ["So21UITableViewDataSourceP", "init"]
 - !private ["So21UITableViewDataSourceP", "numRows"]
+- !private ["So21UITableViewDataSourceP", "orderAddress"]
 - !private ["So21UITableViewDataSourceP", "orderItems"]
 - !private ["So21UITableViewDataSourceP", "orderName"]
+- !private ["So21UITableViewDataSourceP", "phoneNumber"]
 - !private ["So21UITableViewDataSourceP", "ref"]
 - !private ["So21UITableViewDataSourceP", "tableView"]
 - !private ["So21UITableViewDataSourceP", "title"]
@@ -709,12 +824,15 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "Database"]
 - !private ["So19UITableViewDelegateP", "Int"]
 - !private ["So19UITableViewDelegateP", "String"]
+- !private ["So19UITableViewDelegateP", "addressData"]
 - !private ["So19UITableViewDelegateP", "didReceiveMemoryWarning"]
 - !private ["So19UITableViewDelegateP", "dismiss"]
 - !private ["So19UITableViewDelegateP", "init"]
 - !private ["So19UITableViewDelegateP", "numRows"]
+- !private ["So19UITableViewDelegateP", "orderAddress"]
 - !private ["So19UITableViewDelegateP", "orderItems"]
 - !private ["So19UITableViewDelegateP", "orderName"]
+- !private ["So19UITableViewDelegateP", "phoneNumber"]
 - !private ["So19UITableViewDelegateP", "ref"]
 - !private ["So19UITableViewDelegateP", "tableView"]
 - !private ["So19UITableViewDelegateP", "title"]
@@ -726,14 +844,19 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "Database"]
 - !private ["So18UITraitEnvironmentP", "Int"]
 - !private ["So18UITraitEnvironmentP", "String"]
+- !private ["So18UITraitEnvironmentP", "addressData"]
+- !private ["So18UITraitEnvironmentP", "addressLabel"]
 - !private ["So18UITraitEnvironmentP", "dequeueReusableCell"]
 - !private ["So18UITraitEnvironmentP", "detailTextLabel"]
 - !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UITraitEnvironmentP", "dismiss"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "numRows"]
+- !private ["So18UITraitEnvironmentP", "orderAddress"]
 - !private ["So18UITraitEnvironmentP", "orderItems"]
 - !private ["So18UITraitEnvironmentP", "orderName"]
+- !private ["So18UITraitEnvironmentP", "phoneLabel"]
+- !private ["So18UITraitEnvironmentP", "phoneNumber"]
 - !private ["So18UITraitEnvironmentP", "ref"]
 - !private ["So18UITraitEnvironmentP", "reloadData"]
 - !private ["So18UITraitEnvironmentP", "tableView"]
@@ -743,8 +866,10 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "viewDidAppear"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
 - ["So18UITraitEnvironmentP", ""]
+- !private ["So6UIViewC", "addressLabel"]
 - !private ["So6UIViewC", "dequeueReusableCell"]
 - !private ["So6UIViewC", "detailTextLabel"]
+- !private ["So6UIViewC", "phoneLabel"]
 - !private ["So6UIViewC", "reloadData"]
 - !private ["So6UIViewC", "text"]
 - !private ["So6UIViewC", "textLabel"]
@@ -759,15 +884,19 @@ depends-member:
 - ["So16UIViewControllerC", "UIBarButtonItem"]
 - ["So16UIViewControllerC", "UITableView"]
 - ["So16UIViewControllerC", "UITableViewCell"]
+- ["So16UIViewControllerC", "addressData"]
 - ["So16UIViewControllerC", "backButton"]
+- !private ["So16UIViewControllerC", "deliveryDescriptionTableViewCell"]
 - ["So16UIViewControllerC", "didReceiveMemoryWarning"]
 - !private ["So16UIViewControllerC", "dismiss"]
 - ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "markDeliveredBarButton"]
 - ["So16UIViewControllerC", "numRows"]
 - ["So16UIViewControllerC", "numberOfSections"]
+- ["So16UIViewControllerC", "orderAddress"]
 - ["So16UIViewControllerC", "orderItems"]
 - ["So16UIViewControllerC", "orderName"]
+- ["So16UIViewControllerC", "phoneNumber"]
 - ["So16UIViewControllerC", "ref"]
 - ["So16UIViewControllerC", "tableView"]
 - !private ["So16UIViewControllerC", "title"]
@@ -787,8 +916,10 @@ depends-member:
 - !private ["s23_BidirectionalIndexableP", "subscript"]
 - !private ["s23_BidirectionalIndexableP", "value"]
 - !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addressLabel"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "dequeueReusableCell"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "detailTextLabel"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "phoneLabel"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "reloadData"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textLabel"]
@@ -798,13 +929,13 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s24_DestructorSafeContainerP", "value"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- !private ["s33_ExpressibleByStringInterpolationP", "init"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s10_IndexableP", "append"]
 - ["s10_IndexableP", "init"]
 - !private ["s10_IndexableP", "item"]
@@ -822,6 +953,8 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Database"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addressData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addressLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "child"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "children"]
@@ -832,12 +965,15 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "detailTextLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "key"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "numRows"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "observeSingleEvent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "orderAddress"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "orderItems"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "orderName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "phoneLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "phoneNumber"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ref"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reference"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reloadData"]
@@ -874,7 +1010,9 @@ depends-member:
 - !private ["s26_RangeReplaceableIndexableP", "subscript"]
 - !private ["s26_RangeReplaceableIndexableP", "value"]
 - !private ["s11_StrideableP", "init"]
-- !private ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["12Shop_Hosting32deliveryDescriptionTableViewCellC", "addressLabel"]
+- !private ["12Shop_Hosting32deliveryDescriptionTableViewCellC", "phoneLabel"]
 - !private ["12Shop_Hosting30storeOrdersTableViewControllerC", "Auth"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "Bool"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "DataSnapshot"]
@@ -886,16 +1024,20 @@ depends-member:
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "UIBarButtonItem"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "UITableView"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "UITableViewCell"]
+- ["12Shop_Hosting30storeOrdersTableViewControllerC", "addressData"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "backButton"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "deinit"]
+- !private ["12Shop_Hosting30storeOrdersTableViewControllerC", "deliveryDescriptionTableViewCell"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "didReceiveMemoryWarning"]
 - !private ["12Shop_Hosting30storeOrdersTableViewControllerC", "dismiss"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "init"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "markDeliveredBarButton"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "numRows"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "numberOfSections"]
+- ["12Shop_Hosting30storeOrdersTableViewControllerC", "orderAddress"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "orderItems"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "orderName"]
+- ["12Shop_Hosting30storeOrdersTableViewControllerC", "phoneNumber"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "ref"]
 - ["12Shop_Hosting30storeOrdersTableViewControllerC", "tableView"]
 - !private ["12Shop_Hosting30storeOrdersTableViewControllerC", "title"]
@@ -911,9 +1053,9 @@ depends-nominal:
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
 - "s10CollectionP"
-- !private "s10ComparableP"
+- "s10ComparableP"
 - "s28CustomDebugStringConvertibleP"
-- !private "s29CustomPlaygroundQuickLookableP"
+- "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "SC13DataEventTypeO"
@@ -926,40 +1068,44 @@ depends-nominal:
 - "s9EquatableP"
 - "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s17FixedWidthIntegerP"
 - "s8HashableP"
 - !private "10Foundation9IndexPathV"
 - !private "Si"
-- !private "s25LosslessStringConvertibleP"
-- !private "s10MirrorPathP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- !private "s25MutableBidirectionalSliceV"
 - "s17MutableCollectionP"
+- !private "s24MutableRandomAccessSliceV"
+- !private "s12MutableSliceV"
 - "So8NSCodingP"
-- !private "So9NSCopyingP"
+- "So9NSCopyingP"
 - "So26NSExtensionRequestHandlingP"
-- !private "So21NSItemProviderReadingP"
-- !private "So21NSItemProviderWritingP"
-- !private "So16NSMutableCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
 - "So8NSObjectC"
 - "So16NSObjectProtocolP"
-- !private "So14NSSecureCodingP"
-- !private "So8NSStringC"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
 - !private "s7NumericP"
 - "s22RandomAccessCollectionP"
 - "s26RangeReplaceableCollectionP"
+- !private "s21RangeReplaceableSliceV"
 - !private "s16RawRepresentableP"
 - !private "10Foundation20ReferenceConvertibleP"
 - "s8SequenceP"
 - !private "s13SignedIntegerP"
 - !private "s13SignedNumericP"
 - !private "s10StrideableP"
-- !private "SS"
-- !private "s14StringProtocolP"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -997,13 +1143,13 @@ depends-nominal:
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
-- !private "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
-- !private "s33_ExpressibleByStringInterpolationP"
-- !private "s35_HasCustomAnyHashableRepresentationP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
 - "s10_IndexableP"
 - "s14_IndexableBaseP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -1012,7 +1158,8 @@ depends-nominal:
 - "s22_RandomAccessIndexableP"
 - "s26_RangeReplaceableIndexableP"
 - !private "s11_StrideableP"
-- !private "s16_SwiftStringViewP"
+- "s16_SwiftStringViewP"
+- !private "12Shop_Hosting32deliveryDescriptionTableViewCellC"
 - "12Shop_Hosting30storeOrdersTableViewControllerC"
 depends-dynamic-lookup:
 depends-external:
@@ -1100,4 +1247,4 @@ depends-external:
 - "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Users/sethsaps/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "349e3e0c318df655af745f2ee710b670"
+interface-hash: "e02bb141250386a6a8e615635706cf37"

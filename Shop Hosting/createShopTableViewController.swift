@@ -48,7 +48,7 @@ class createShopTableViewController: UITableViewController {
         let values = ["shopOwner" : Auth.auth().currentUser!.uid,
                       "shopName" : shopName]
         
-        let values2 = [shopName : true]
+        let values2 = [shopName : referralCode]
         self.ref.child("shops").child(referralCode).setValue(values)
         
         self.ref.child("shops").child(referralCode).child("shopItems").setValue(itemData)

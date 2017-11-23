@@ -36,6 +36,8 @@ class deliveryDetailViewController: UIViewController {
     
     @IBOutlet weak var zipTextField: UITextField!
     
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
     var ref : DatabaseReference!
     
     @IBOutlet weak var warningMessage: UILabel!
@@ -55,6 +57,8 @@ class deliveryDetailViewController: UIViewController {
                                   "state" : self.stateTextField.text!,
                                   "zip" : self.zipTextField.text!]
             self.ref.child("users").child((Auth.auth().currentUser?.uid)!).child("userOrders").child(time).setValue(self.order)
+            
+            
             //get current shop owner to set his current shop orders
             self.ref.child("shops").child(self.shopName).observeSingleEvent(of: .value, with: {(snapshot) in
                 if let dict = snapshot.value as? [String : AnyObject] {
@@ -66,6 +70,8 @@ class deliveryDetailViewController: UIViewController {
                         self.ref.child("users").child(shopOwner).child("shopOrders").child((Auth.auth().currentUser?.uid)! + time).updateChildValues(["delivered" : false])
                         
                         self.ref.child("users").child(shopOwner).child("shopOrders").child((Auth.auth().currentUser?.uid)! + time).child("deliveryDetails").setValue(addressDetails)
+                        
+                        self.ref.child("users").child(shopOwner).child("shopOrders").child((Auth.auth().currentUser?.uid)! + time).updateChildValues(["phoneNumber" : self.phoneNumberTextField.text!])
                         
                     }
                 }

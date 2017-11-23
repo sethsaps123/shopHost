@@ -48,6 +48,10 @@ class myShopsTableViewController: UITableViewController {
     
     var usersShops = [DataSnapshot]()
     
+    var shopToSegueTo : String!
+    
+    var shopNameToSegueTo : String!
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -75,6 +79,25 @@ class myShopsTableViewController: UITableViewController {
         cell.textLabel?.text = (String)(describing: usersShops[indexPath.item].key)
 
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier != nil) {
+           if segue.identifier! == "toEditShop" {
+                if let navVC = segue.destination as? UINavigationController {
+                    if let vc = navVC.viewControllers.first as? editShopTableViewController {
+                        vc.shopReferralCode = shopToSegueTo!
+                        vc.shopName = shopNameToSegueTo!
+                    }
+                }
+            }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        shopToSegueTo = (String)(describing: (usersShops[indexPath.item].value)!)
+        shopNameToSegueTo = usersShops[indexPath.item].key
+        performSegue(withIdentifier: "toEditShop", sender: self)
     }
     
 

@@ -16,8 +16,8 @@
 	<string>sys</string>
 	<string>FirebaseRemoteConfig</string>
 	<string>Crashlytics</string>
-	<string>FirebaseAuth</string>
 	<string>WatchKit</string>
+	<string>FirebaseAuth</string>
 	<string>FirebaseCrash</string>
 	<string>FirebaseMessaging</string>
 	<string>FirebaseCore</string>
