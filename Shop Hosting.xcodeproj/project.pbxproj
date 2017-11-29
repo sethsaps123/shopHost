@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		056EE2EA1DC7D004DECB1424 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619B450AC777353DF9F4379E /* SystemConfiguration.framework */; };
+		22DC5B6C2E8652E49C4014B3 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5426F23F9A5F19AF05AE997 /* CoreText.framework */; };
 		2F04F4B31FA1441100480FE5 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F04F4B01FA1441000480FE5 /* menu.png */; };
 		2F04F4B41FA1441100480FE5 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F04F4B11FA1441100480FE5 /* menu@2x.png */; };
 		2F04F4B51FA1441100480FE5 /* menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F04F4B21FA1441100480FE5 /* menu@3x.png */; };
@@ -47,7 +49,14 @@
 		2FF3CEBD1F9A52070050E004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF3CEBC1F9A52070050E004 /* Assets.xcassets */; };
 		2FF3CEC01F9A52070050E004 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF3CEBE1F9A52070050E004 /* LaunchScreen.storyboard */; };
 		2FF3CEC81F9A52610050E004 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FF3CEC71F9A52610050E004 /* GoogleService-Info.plist */; };
+		798B74222DEBAA96AA6109C1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C269AC0B4734567AFDD1FEB8 /* AssetsLibrary.framework */; };
+		88E12D9AA66CA8D8D74C43DC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1898C646B6D583E280492BF /* CoreMedia.framework */; };
+		8E44B8B26160723CAAF49851 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEA266673899C5DA6B351DC /* CoreTelephony.framework */; };
 		988B39D9C210669D153E0B51 /* libPods-Shop Hosting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE669AFF00A5CC06EBBC8F7E /* libPods-Shop Hosting.a */; };
+		AB36BE6814A01841EAE55688 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BE4FE8F8B20565AF018EE7 /* CoreVideo.framework */; };
+		C51464BD3A0B8DCE39FEF629 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D00480FB0EC0950F8664FB /* BuddyBuildSDK.framework */; };
+		D8B710B75F7A9F0279DBC3A5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D558E1404A67ADABD442B244 /* AVFoundation.framework */; };
+		E97CBFCA6C32E41B7D59B24F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1451B744ED5D0AB8E56E8 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,9 +104,18 @@
 		2FF3CEBF1F9A52070050E004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FF3CEC11F9A52070050E004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FF3CEC71F9A52610050E004 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		37D00480FB0EC0950F8664FB /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BuddyBuildSDK.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
+		47BE4FE8F8B20565AF018EE7 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		619B450AC777353DF9F4379E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7809F5E9B3C98E98F58507A2 /* Pods-Shop Hosting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop Hosting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shop Hosting/Pods-Shop Hosting.debug.xcconfig"; sourceTree = "<group>"; };
+		97F1451B744ED5D0AB8E56E8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C269AC0B4734567AFDD1FEB8 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		CE669AFF00A5CC06EBBC8F7E /* libPods-Shop Hosting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shop Hosting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D558E1404A67ADABD442B244 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DBC6BB230F40A7B4AC92D189 /* Pods-Shop Hosting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop Hosting.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shop Hosting/Pods-Shop Hosting.release.xcconfig"; sourceTree = "<group>"; };
+		EBEA266673899C5DA6B351DC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F1898C646B6D583E280492BF /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F5426F23F9A5F19AF05AE997 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +124,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				988B39D9C210669D153E0B51 /* libPods-Shop Hosting.a in Frameworks */,
+				C51464BD3A0B8DCE39FEF629 /* BuddyBuildSDK.framework in Frameworks */,
+				798B74222DEBAA96AA6109C1 /* AssetsLibrary.framework in Frameworks */,
+				22DC5B6C2E8652E49C4014B3 /* CoreText.framework in Frameworks */,
+				8E44B8B26160723CAAF49851 /* CoreTelephony.framework in Frameworks */,
+				056EE2EA1DC7D004DECB1424 /* SystemConfiguration.framework in Frameworks */,
+				E97CBFCA6C32E41B7D59B24F /* QuartzCore.framework in Frameworks */,
+				D8B710B75F7A9F0279DBC3A5 /* AVFoundation.framework in Frameworks */,
+				88E12D9AA66CA8D8D74C43DC /* CoreMedia.framework in Frameworks */,
+				AB36BE6814A01841EAE55688 /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +143,15 @@
 			isa = PBXGroup;
 			children = (
 				CE669AFF00A5CC06EBBC8F7E /* libPods-Shop Hosting.a */,
+				37D00480FB0EC0950F8664FB /* BuddyBuildSDK.framework */,
+				C269AC0B4734567AFDD1FEB8 /* AssetsLibrary.framework */,
+				F5426F23F9A5F19AF05AE997 /* CoreText.framework */,
+				EBEA266673899C5DA6B351DC /* CoreTelephony.framework */,
+				619B450AC777353DF9F4379E /* SystemConfiguration.framework */,
+				97F1451B744ED5D0AB8E56E8 /* QuartzCore.framework */,
+				D558E1404A67ADABD442B244 /* AVFoundation.framework */,
+				F1898C646B6D583E280492BF /* CoreMedia.framework */,
+				47BE4FE8F8B20565AF018EE7 /* CoreVideo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -501,6 +537,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H749SUR7RN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Shop Hosting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.umich.sethsaps.Shop-Hosting";
@@ -520,6 +560,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H749SUR7RN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Shop Hosting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.umich.sethsaps.Shop-Hosting";
